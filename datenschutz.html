@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Datenschutzerklärung der LA Tuning – Informationen zum Datenschutz gemäß DSGVO.">
+    <meta name="robots" content="noindex, follow">
+    <title>Datenschutzerklärung – LA Tuning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ============================
+           CSS RESET & VARIABLES
+        ============================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #080808;
+            --surface: #111114;
+            --surface-2: #1a1a1f;
+            --red: #E31E24;
+            --red-dark: #A01018;
+            --red-glow: rgba(227, 30, 36, 0.25);
+            --red-glow-strong: rgba(227, 30, 36, 0.5);
+            --white: #FFFFFF;
+            --gray: #9a9a9a;
+            --gray-light: #c0c0c0;
+            --border: rgba(227, 30, 36, 0.3);
+            --font-heading: 'Rajdhani', 'Arial Narrow', sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+            --nav-height: 70px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+            opacity: 0;
+            animation: fadeInBody 0.8s ease forwards;
+        }
+
+        @keyframes fadeInBody {
+            to { opacity: 1; }
+        }
+
+        a {
+            color: var(--red);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--white);
+        }
+
+        /* ============================
+           NAVIGATION
+        ============================ */
+        .legal-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(8, 8, 8, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .legal-nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legal-nav-logo span {
+            color: var(--red);
+        }
+
+        .legal-nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+        }
+
+        .legal-nav-links a {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            transition: color 0.3s ease;
+        }
+
+        .legal-nav-links a:hover,
+        .legal-nav-links a.active {
+            color: var(--red);
+        }
+
+        /* ============================
+           LEGAL CONTENT
+        ============================ */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: calc(var(--nav-height) + 60px) 24px 80px;
+        }
+
+        .legal-content h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .legal-content .subtitle {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .legal-content h2 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--red);
+            margin-top: 48px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(227, 30, 36, 0.15);
+        }
+
+        .legal-content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+
+        .legal-content p {
+            color: var(--gray-light);
+            font-size: 0.92rem;
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .legal-content ul,
+        .legal-content ol {
+            color: var(--gray-light);
+            font-size: 0.92rem;
+            margin: 10px 0 18px 24px;
+            line-height: 1.8;
+        }
+
+        .legal-content li {
+            margin-bottom: 6px;
+        }
+
+        .legal-content strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .legal-content .info-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 16px 0 24px;
+        }
+
+        .legal-content .info-box p {
+            margin-bottom: 4px;
+        }
+
+        /* ============================
+           FOOTER
+        ============================ */
+        .legal-footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 32px 24px;
+        }
+
+        .legal-footer p {
+            color: var(--gray);
+            font-size: 0.82rem;
+        }
+
+        .legal-footer a {
+            color: var(--gray-light);
+            margin: 0 8px;
+        }
+
+        .legal-footer a:hover {
+            color: var(--red);
+        }
+
+        /* ============================
+           BACK TO TOP
+        ============================ */
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 20px var(--red-glow);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--red-dark);
+            transform: translateY(-3px);
+        }
+
+        /* ============================
+           RESPONSIVE
+        ============================ */
+        @media (max-width: 600px) {
+            .legal-nav {
+                padding: 0 16px;
+            }
+
+            .legal-nav-links {
+                gap: 14px;
+            }
+
+            .legal-nav-links a {
+                font-size: 0.75rem;
+            }
+
+            .legal-content {
+                padding: calc(var(--nav-height) + 40px) 16px 60px;
+            }
+
+            .legal-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .legal-content h2 {
+                font-size: 1.2rem;
+                margin-top: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="legal-nav">
+        <a href="index.html" class="legal-nav-logo">LA <span>Tuning</span></a>
+        <ul class="legal-nav-links">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html" class="active">Datenschutz</a></li>
+        </ul>
+    </nav>
+
+    <!-- LEGAL CONTENT -->
+    <main class="legal-content">
+
+        <h1>Datenschutz&shy;erklärung</h1>
+        <p class="subtitle">Stand: Juni 2025 – Verantwortlicher: Murat Sahin, LA Tuning</p>
+
+        <!-- 1. Verantwortlicher -->
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze sowie sonstiger datenschutzrechtlicher Bestimmungen ist:</p>
+        <div class="info-box">
+            <p><strong>Murat Sahin</strong></p>
+            <p>LA Tuning</p>
+            <p>Am Bäckergarten 9</p>
+            <p>84166 Adlkofen</p>
+            <p>Telefon: <a href="tel:+491772253484">+49 177 2253484</a></p>
+            <p>E-Mail: <a href="mailto:murat.sahin@latuning.de">murat.sahin@latuning.de</a></p>
+        </div>
+
+        <!-- 2. Datenschutzbeauftragter -->
+        <h2>2. Datenschutzbeauftragter</h2>
+        <p>Die Benennung eines Datenschutzbeauftragten ist nicht erforderlich gemäß § 38 Abs. 1 BDSG, da in der Regel weniger als 20 Personen ständig mit der automatisierten Verarbeitung personenbezogener Daten beschäftigt sind.</p>
+        <p>Bei Fragen zum Datenschutz können Sie sich jederzeit direkt an den oben genannten Verantwortlichen wenden.</p>
+
+        <!-- 3. Übersicht Verarbeitungstätigkeiten -->
+        <h2>3. Übersicht der Verarbeitungstätigkeiten</h2>
+        <h3>Arten der verarbeiteten Daten</h3>
+        <ul>
+            <li><strong>Bestandsdaten</strong> (z.&nbsp;B. Namen, Adressen)</li>
+            <li><strong>Kontaktdaten</strong> (z.&nbsp;B. E-Mail-Adressen, Telefonnummern)</li>
+            <li><strong>Inhaltsdaten</strong> (z.&nbsp;B. Eingaben in Formularen, Nachrichteninhalte)</li>
+            <li><strong>Nutzungsdaten</strong> (z.&nbsp;B. besuchte Webseiten, Zugriffszeiten)</li>
+            <li><strong>Meta- und Kommunikationsdaten</strong> (z.&nbsp;B. Geräte-Informationen, IP-Adressen)</li>
+            <li><strong>Fahrzeugbezogene Daten</strong> (z.&nbsp;B. Fahrzeug-Identifikationsnummer, Kennzeichen, ECU-Daten)</li>
+        </ul>
+        <h3>Kategorien betroffener Personen</h3>
+        <ul>
+            <li>Webseitenbesucher</li>
+            <li>Kunden und Interessenten</li>
+            <li>Kommunikationspartner</li>
+        </ul>
+
+        <!-- 4. Rechtsgrundlagen -->
+        <h2>4. Rechtsgrundlagen der Verarbeitung</h2>
+        <p>Im Folgenden erhalten Sie eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten:</p>
+        <ul>
+            <li><strong>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</strong> – Die betroffene Person hat ihre Einwilligung zu der Verarbeitung der sie betreffenden personenbezogenen Daten für einen oder mehrere bestimmte Zwecke gegeben (z.&nbsp;B. Kontaktaufnahme über WhatsApp).</li>
+            <li><strong>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung und vorvertragliche Anfragen)</strong> – Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der betroffenen Person erfolgen (z.&nbsp;B. Fahrzeugdaten zur Durchführung von Chiptuning-Aufträgen).</li>
+            <li><strong>Art. 6 Abs. 1 lit. c DSGVO (Rechtliche Verpflichtung)</strong> – Die Verarbeitung ist zur Erfüllung einer rechtlichen Verpflichtung erforderlich, der der Verantwortliche unterliegt (z.&nbsp;B. Aufbewahrungspflichten nach Steuer- und Handelsrecht).</li>
+            <li><strong>Art. 6 Abs. 1 lit. d DSGVO (Lebenswichtige Interessen)</strong> – Die Verarbeitung ist erforderlich, um lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person zu schützen.</li>
+            <li><strong>Art. 6 Abs. 1 lit. e DSGVO (Öffentliches Interesse)</strong> – Die Verarbeitung ist für die Wahrnehmung einer Aufgabe erforderlich, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die dem Verantwortlichen übertragen wurde.</li>
+            <li><strong>Art. 6 Abs. 1 lit. f DSGVO (Berechtigte Interessen)</strong> – Die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten erforderlich, sofern nicht die Interessen oder Grundrechte und Grundfreiheiten der betroffenen Person überwiegen (z.&nbsp;B. Betrieb und Sicherheit der Webseite, Server-Logfiles, Einbindung von Google Fonts).</li>
+        </ul>
+
+        <!-- 5. Server-Logfiles und Hosting -->
+        <h2>5. Server-Logfiles und Hosting</h2>
+        <p>Der Hosting-Anbieter unserer Webseite erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch an uns übermittelt. Dies sind:</p>
+        <ul>
+            <li>IP-Adresse des zugreifenden Rechners</li>
+            <li>Datum und Uhrzeit des Zugriffs</li>
+            <li>Aufgerufene URL (besuchte Seite)</li>
+            <li>Übertragene Datenmenge</li>
+            <li>HTTP-Statuscode (z.&nbsp;B. 200, 404)</li>
+            <li>Verwendeter Browser und Browserversion</li>
+            <li>Betriebssystem des Nutzers</li>
+            <li>Referrer-URL (zuvor besuchte Seite)</li>
+            <li>Hostname des zugreifenden Rechners</li>
+        </ul>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in der Sicherstellung eines störungsfreien Betriebs unserer Webseite sowie der Verbesserung unseres Angebots. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
+        <p><strong>Speicherdauer:</strong> Die Server-Logfiles werden nach <strong>30 Tagen</strong> automatisch gelöscht, sofern keine darüber hinausgehende Aufbewahrung zu Beweiszwecken erforderlich ist.</p>
+
+        <!-- 6. Cookies -->
+        <h2>6. Cookies</h2>
+        <p>Unsere Webseite verwendet <strong>keine Tracking-Cookies</strong>. Es werden keine Cookies zu Analyse-, Marketing- oder Werbezwecken eingesetzt.</p>
+        <p>Wir nutzen ausschließlich den <strong>localStorage</strong> des Browsers, um die Bestätigung des Cookie-Banners zu speichern. Diese Information dient lediglich dazu, das Banner bei erneuten Besuchen nicht erneut anzuzeigen. Es handelt sich dabei um keine personenbezogenen Daten.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer nutzerfreundlichen Gestaltung der Webseite).</p>
+
+        <!-- 7. Keine externen Analyse-/Tracking-Tools -->
+        <h2>7. Keine externen Analyse- und Tracking-Tools</h2>
+        <p>Wir setzen auf unserer Webseite <strong>keine</strong> externen Analyse- oder Tracking-Tools ein. Insbesondere verwenden wir:</p>
+        <ul>
+            <li><strong>Kein</strong> Google Analytics</li>
+            <li><strong>Kein</strong> Matomo (ehemals Piwik)</li>
+            <li><strong>Kein</strong> Facebook Pixel</li>
+            <li><strong>Keine</strong> sonstigen Tracking- oder Remarketing-Dienste</li>
+        </ul>
+        <p>Eine Erstellung von Nutzerprofilen oder eine Auswertung Ihres Surfverhaltens findet nicht statt.</p>
+
+        <!-- 8. Google Fonts -->
+        <h2>8. Google Fonts</h2>
+        <p>Diese Webseite nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, die von <strong>Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA</strong> bereitgestellt werden.</p>
+        <p>Beim Aufrufen unserer Webseite lädt Ihr Browser die benötigten Schriftarten direkt von Google-Servern. Dabei wird Ihre IP-Adresse an Google übermittelt. Weitere Informationen finden Sie in den Datenschutzhinweisen von Google unter <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer ansprechenden und einheitlichen Darstellung unserer Webseite).</p>
+        <p><strong>Drittlandtransfer:</strong> Google LLC ist unter dem <strong>EU-US Data Privacy Framework (DPF)</strong> zertifiziert, wodurch ein angemessenes Datenschutzniveau im Sinne der DSGVO gewährleistet wird.</p>
+
+        <!-- 9. Telefon-Kontakt -->
+        <h2>9. Kontaktaufnahme per Telefon</h2>
+        <p>Wenn Sie uns telefonisch kontaktieren, wird Ihre <strong>Rufnummer</strong> durch unseren Telekommunikationsanbieter verarbeitet und gegebenenfalls auf unserem Endgerät angezeigt. Die Rufnummer wird gespeichert, sofern dies zur Bearbeitung Ihrer Anfrage oder zur späteren Kontaktaufnahme erforderlich ist.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Maßnahmen) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer effizienten Bearbeitung von Kundenanfragen).</p>
+
+        <!-- 10. E-Mail -->
+        <h2>10. Kontaktaufnahme per E-Mail</h2>
+        <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben einschließlich der von Ihnen mitgeteilten Kontaktdaten und Nachrichteninhalte zum Zweck der Bearbeitung Ihrer Anfrage sowie für den Fall von Anschlussfragen bei uns gespeichert.</p>
+        <p>Wir nutzen <strong>Microsoft Outlook</strong> als E-Mail-Dienst. Microsoft fungiert dabei als <strong>Auftragsverarbeiter</strong> im Sinne von Art. 28 DSGVO. Ein entsprechender Auftragsverarbeitungsvertrag (AVV) ist mit Microsoft geschlossen.</p>
+        <p><strong>Drittlandtransfer:</strong> Microsoft ist unter dem <strong>EU-US Data Privacy Framework (DPF)</strong> zertifiziert, wodurch ein angemessenes Datenschutzniveau gewährleistet wird.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse).</p>
+
+        <!-- 11. WhatsApp -->
+        <h2>11. Kontaktaufnahme über WhatsApp</h2>
+        <p>Sie haben die Möglichkeit, uns über den Messenger-Dienst <strong>WhatsApp</strong> zu kontaktieren. WhatsApp wird betrieben von <strong>Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland</strong> (für Nutzer im Europäischen Wirtschaftsraum).</p>
+        <p>Bei der Nutzung von WhatsApp werden personenbezogene Daten (z.&nbsp;B. Ihre Telefonnummer, Nachrichteninhalte, Profilbild, Status, Zeitstempel) an Meta Platforms Inc. in den USA übermittelt.</p>
+        <p><strong>Drittlandtransfer:</strong> Meta Platforms Inc. ist unter dem <strong>EU-US Data Privacy Framework (DPF)</strong> zertifiziert. Zusätzlich kommen <strong>Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO</strong> zur Anwendung, um ein angemessenes Datenschutzniveau sicherzustellen.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung bzw. vorvertragliche Anfragen, sofern die Kontaktaufnahme im Zusammenhang mit einer Leistungserbringung steht) sowie Art. 6 Abs. 1 lit. a DSGVO (Einwilligung – indem Sie uns aktiv über WhatsApp kontaktieren, willigen Sie in die damit verbundene Datenverarbeitung ein).</p>
+        <p>Weitere Informationen zum Datenschutz bei WhatsApp finden Sie unter <a href="https://www.whatsapp.com/legal/privacy-policy-eea" target="_blank" rel="noopener noreferrer">https://www.whatsapp.com/legal/privacy-policy-eea</a>.</p>
+
+        <!-- 12. Instagram -->
+        <h2>12. Instagram</h2>
+        <p>Unsere Webseite enthält einen <strong>Link</strong> zu unserem Instagram-Profil. Instagram ist ein Dienst der <strong>Meta Platforms Ireland Ltd., 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland</strong>.</p>
+        <p>Es handelt sich ausschließlich um eine <strong>Verlinkung</strong> (externer Link). Es werden <strong>keine</strong> Instagram-Plugins, Widgets oder eingebettete Inhalte (Embeds) auf unserer Webseite verwendet. Beim bloßen Klick auf den Link werden erst nach Weiterleitung auf die Instagram-Seite Daten durch Meta verarbeitet.</p>
+        <p>Weitere Informationen finden Sie in der Datenschutzrichtlinie von Instagram unter <a href="https://help.instagram.com/519522125107875" target="_blank" rel="noopener noreferrer">https://help.instagram.com/519522125107875</a>.</p>
+
+        <!-- 13. Fahrzeugbezogene Daten -->
+        <h2>13. Fahrzeugbezogene Daten</h2>
+        <p>Im Rahmen unserer Chiptuning- und Fahrzeugoptimierungsdienstleistungen verarbeiten wir folgende fahrzeugbezogene Daten:</p>
+        <ul>
+            <li><strong>Fahrzeug-Identifikationsnummer (FIN/VIN)</strong></li>
+            <li><strong>Amtliches Kennzeichen</strong></li>
+            <li><strong>Fahrzeugtyp</strong> (Marke, Modell, Baujahr, Motorisierung)</li>
+            <li><strong>ECU-Rohdaten</strong> (Steuergeräte-Originaldaten und modifizierte Kennfelder)</li>
+            <li><strong>Leistungsprotokolle</strong> (Messergebnisse vor und nach der Optimierung)</li>
+            <li><strong>Hardware-Modifikationen</strong> (dokumentierte Umbauten und Teileverbau)</li>
+        </ul>
+        <p>Diese Daten werden ausschließlich zum Zweck der Auftragsbearbeitung, der technischen Dokumentation sowie zur Gewährleistung und Nachvollziehbarkeit der durchgeführten Arbeiten erhoben und gespeichert.</p>
+        <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung – die Verarbeitung ist erforderlich zur Durchführung des Tuning-Auftrags).</p>
+
+        <!-- 14. Speicherdauer -->
+        <h2>14. Speicherdauer</h2>
+        <p>Wir speichern personenbezogene Daten nur so lange, wie es für den jeweiligen Verarbeitungszweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen:</p>
+        <ul>
+            <li><strong>Allgemeine Korrespondenz:</strong> Löschung nach Abschluss der Kommunikation bzw. des Anliegens, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</li>
+            <li><strong>Verträge und Rechnungen:</strong> 10 Jahre gemäß § 147 Abs. 1 AO (Abgabenordnung) – steuerrechtliche Aufbewahrungspflicht.</li>
+            <li><strong>Geschäftsbriefe und Handelsbriefe:</strong> 6 Jahre gemäß § 257 Abs. 1 HGB (Handelsgesetzbuch) – handelsrechtliche Aufbewahrungspflicht.</li>
+            <li><strong>Fahrzeugbezogene Daten:</strong> 10 Jahre nach Abschluss des Auftrags, um Gewährleistungsansprüche und technische Nachvollziehbarkeit sicherzustellen.</li>
+            <li><strong>Server-Logfiles:</strong> 30 Tage, anschließend automatische Löschung.</li>
+        </ul>
+        <p>Nach Ablauf der jeweiligen Frist werden die Daten routinemäßig und gesetzeskonform gelöscht oder anonymisiert.</p>
+
+        <!-- 15. Empfänger -->
+        <h2>15. Empfänger der Daten</h2>
+        <p>Eine Übermittlung Ihrer personenbezogenen Daten an Dritte findet grundsätzlich <strong>nicht</strong> statt, es sei denn:</p>
+        <ul>
+            <li>Sie haben ausdrücklich Ihre Einwilligung erteilt (Art. 6 Abs. 1 lit. a DSGVO),</li>
+            <li>die Weitergabe ist zur Vertragserfüllung erforderlich (Art. 6 Abs. 1 lit. b DSGVO),</li>
+            <li>eine gesetzliche Verpflichtung besteht (Art. 6 Abs. 1 lit. c DSGVO).</li>
+        </ul>
+        <p>Unser <strong>Hosting-Anbieter</strong> hat als Auftragsverarbeiter im Sinne von Art. 28 DSGVO Zugriff auf die auf dem Server gespeicherten Daten. Ein entsprechender Auftragsverarbeitungsvertrag (AVV) ist geschlossen. Der Hosting-Anbieter verarbeitet die Daten ausschließlich weisungsgebunden und nicht zu eigenen Zwecken.</p>
+        <p>Darüber hinaus findet <strong>keine Weitergabe</strong> personenbezogener Daten an Dritte ohne Ihre ausdrückliche Einwilligung statt.</p>
+
+        <!-- 16. Drittländer -->
+        <h2>16. Datenübermittlung in Drittländer</h2>
+        <p>Im Rahmen der Nutzung bestimmter Dienste kann eine Übermittlung personenbezogener Daten in Drittländer (insbesondere die USA) stattfinden. Dies betrifft folgende Dienste:</p>
+        <ul>
+            <li><strong>Google Fonts</strong> (Google LLC, USA) – zertifiziert unter dem EU-US Data Privacy Framework</li>
+            <li><strong>WhatsApp</strong> (Meta Platforms Inc., USA) – zertifiziert unter dem EU-US Data Privacy Framework, zusätzlich Standardvertragsklauseln</li>
+            <li><strong>Instagram</strong> (Meta Platforms Inc., USA) – nur Verlinkung, keine direkte Datenübertragung von unserer Webseite; bei Besuch der Instagram-Seite gelten die Datenschutzbestimmungen von Meta</li>
+            <li><strong>Microsoft Outlook</strong> (Microsoft Corporation, USA) – zertifiziert unter dem EU-US Data Privacy Framework</li>
+        </ul>
+        <p>Das <strong>EU-US Data Privacy Framework (DPF)</strong> stellt gemäß dem Angemessenheitsbeschluss der Europäischen Kommission vom 10. Juli 2023 ein angemessenes Datenschutzniveau für zertifizierte US-Unternehmen sicher.</p>
+
+        <!-- 17. SSL/TLS -->
+        <h2>17. SSL/TLS-Verschlüsselung</h2>
+        <p>Diese Webseite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung personenbezogener Daten eine <strong>SSL- bzw. TLS-Verschlüsselung</strong>. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf <strong>„https://"</strong> wechselt und an dem Schloss-Symbol in Ihrer Browserleiste.</p>
+        <p>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+
+        <!-- 18. Betroffenenrechte -->
+        <h2>18. Ihre Rechte als betroffene Person</h2>
+        <p>Ihnen stehen als betroffene Person gemäß der DSGVO folgende Rechte zu:</p>
+
+        <h3>a) Recht auf Auskunft (Art. 15 DSGVO)</h3>
+        <p>Sie haben das Recht, von uns eine Bestätigung darüber zu verlangen, ob betreffende personenbezogene Daten verarbeitet werden. Ist dies der Fall, haben Sie ein Recht auf Auskunft über diese personenbezogenen Daten sowie auf weitere Informationen gemäß Art. 15 DSGVO (u.&nbsp;a. Verarbeitungszwecke, Kategorien, Empfänger, Speicherdauer).</p>
+
+        <h3>b) Recht auf Berichtigung (Art. 16 DSGVO)</h3>
+        <p>Sie haben das Recht, unverzüglich die Berichtigung unrichtiger personenbezogener Daten sowie die Vervollständigung unvollständiger Daten zu verlangen.</p>
+
+        <h3>c) Recht auf Löschung (Art. 17 DSGVO)</h3>
+        <p>Sie haben das Recht, die unverzügliche Löschung Ihrer personenbezogenen Daten zu verlangen, sofern einer der in Art. 17 Abs. 1 DSGVO genannten Gründe zutrifft, z.&nbsp;B. wenn die Daten für den ursprünglichen Zweck nicht mehr notwendig sind. Das Recht auf Löschung besteht nicht, soweit die Verarbeitung zur Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist.</p>
+
+        <h3>d) Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</h3>
+        <p>Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen, wenn eine der in Art. 18 Abs. 1 DSGVO genannten Voraussetzungen gegeben ist, z.&nbsp;B. wenn Sie die Richtigkeit der Daten bestreiten.</p>
+
+        <h3>e) Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</h3>
+        <p>Sie haben das Recht, die Sie betreffenden personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Sie haben ferner das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung zu übermitteln, sofern die Verarbeitung auf einer Einwilligung oder einem Vertrag beruht und mithilfe automatisierter Verfahren erfolgt.</p>
+
+        <h3>f) Recht auf Widerspruch (Art. 21 DSGVO)</h3>
+        <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen. Der Verantwortliche verarbeitet die personenbezogenen Daten dann nicht mehr, es sei denn, er kann zwingende schutzwürdige Gründe für die Verarbeitung nachweisen.</p>
+
+        <h3>g) Recht auf Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)</h3>
+        <p>Sofern die Verarbeitung auf Ihrer Einwilligung beruht, haben Sie das Recht, diese Einwilligung jederzeit zu widerrufen. Die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt. Den Widerruf können Sie formlos an die oben genannten Kontaktdaten richten.</p>
+
+        <!-- 19. Beschwerderecht -->
+        <h2>19. Beschwerderecht bei einer Aufsichtsbehörde</h2>
+        <p>Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs haben Sie das Recht, sich bei einer Aufsichtsbehörde zu beschweren, wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen die DSGVO verstößt.</p>
+        <p>Die für uns zuständige Aufsichtsbehörde ist:</p>
+        <div class="info-box">
+            <p><strong>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong></p>
+            <p>Promenade 18</p>
+            <p>91522 Ansbach</p>
+            <p>Telefon: <a href="tel:+499811800930">+49 981 180093-0</a></p>
+            <p>E-Mail: <a href="mailto:poststelle@lda.bayern.de">poststelle@lda.bayern.de</a></p>
+            <p>Webseite: <a href="https://www.lda.bayern.de" target="_blank" rel="noopener noreferrer">www.lda.bayern.de</a></p>
+        </div>
+
+        <!-- 20. Keine automatisierte Entscheidungsfindung -->
+        <h2>20. Automatisierte Entscheidungsfindung / Profiling</h2>
+        <p>Wir verzichten auf eine <strong>automatisierte Entscheidungsfindung</strong> einschließlich <strong>Profiling</strong> gemäß Art. 22 DSGVO. Es werden keine Entscheidungen getroffen, die ausschließlich auf einer automatisierten Verarbeitung – einschließlich Profiling – beruhen und die Ihnen gegenüber rechtliche Wirkung entfalten oder Sie in ähnlicher Weise erheblich beeinträchtigen.</p>
+
+        <!-- 21. Schutz Minderjähriger -->
+        <h2>21. Schutz Minderjähriger</h2>
+        <p>Unser Angebot richtet sich grundsätzlich an Personen, die das <strong>16. Lebensjahr</strong> vollendet haben. Wir erheben wissentlich keine personenbezogenen Daten von Kindern und Jugendlichen unter 16 Jahren. Sollten wir Kenntnis davon erlangen, dass personenbezogene Daten von Personen unter 16 Jahren ohne die Einwilligung eines Erziehungsberechtigten erhoben wurden, werden wir diese Daten unverzüglich löschen.</p>
+
+        <!-- 22. Änderungsvorbehalt -->
+        <h2>22. Änderungsvorbehalt</h2>
+        <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z.&nbsp;B. bei der Einführung neuer Services. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
+        <p><strong>Stand: Juni 2025</strong></p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="legal-footer">
+        <p>&copy; 2025 LA Tuning – Murat Sahin. Alle Rechte vorbehalten.</p>
+        <p style="margin-top: 8px;">
+            <a href="index.html">Startseite</a> ·
+            <a href="impressum.html">Impressum</a> ·
+            <a href="datenschutz.html">Datenschutz</a>
+        </p>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Zurück nach oben" title="Zurück nach oben">&#9650;</button>
+
+    <script>
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
