@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 380">
+  <!-- LA Tuning Logo – faithful SVG recreation -->
+
+  <!-- ============ SPEEDOMETER ARC ============ -->
+  <!-- Outer dashed arc – White section (10 o'clock → 1 o'clock) -->
+  <path d="M 82 116 A 160 160 0 0 0 312 64"
+        stroke="#FFFFFF" stroke-width="11" fill="none" stroke-linecap="butt"
+        stroke-dasharray="18 5"/>
+
+  <!-- Outer dashed arc – Red section (1 o'clock → 4 o'clock) -->
+  <path d="M 312 64 A 160 160 0 0 0 350 292"
+        stroke="#E31E24" stroke-width="11" fill="none" stroke-linecap="butt"
+        stroke-dasharray="18 5"/>
+
+  <!-- Inner solid arc – White section -->
+  <path d="M 93 122 A 148 148 0 0 0 305 74"
+        stroke="#FFFFFF" stroke-width="2.5" fill="none"/>
+
+  <!-- Inner solid arc – Red section -->
+  <path d="M 305 74 A 148 148 0 0 0 340 284"
+        stroke="#E31E24" stroke-width="2.5" fill="none"/>
+
+  <!-- ============ NEEDLE ============ -->
+  <line x1="218" y1="218" x2="316" y2="74" stroke="#E31E24" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- ============ L LETTER (white, bold italic) ============ -->
+  <polygon points="
+    82,270
+    130,92
+    180,52
+    136,232
+    278,232
+    274,270
+  " fill="#FFFFFF"/>
+
+  <!-- ============ RED ACCENT LINE (connecting L → A) ============ -->
+  <polygon points="134,232 200,232 198,237 132,237" fill="#E31E24"/>
+
+  <!-- ============ A LETTER (red, bold italic with counter) ============ -->
+  <path d="
+    M 196,270
+    L 282,46
+    L 370,270
+    L 322,270
+    L 296,192
+    L 254,192
+    L 228,270
+    Z
+    M 260,178
+    L 282,112
+    L 304,178
+    Z
+  " fill="#E31E24" fill-rule="evenodd"/>
+
+  <!-- ============ TUNING TEXT ============ -->
+  <!-- Red accent line – left -->
+  <line x1="62" y1="310" x2="128" y2="310" stroke="#E31E24" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- TUNING letters -->
+  <text x="228" y="318" font-family="'Rajdhani','Arial Narrow',Arial,sans-serif"
+        font-weight="700" font-size="32" fill="#FFFFFF" text-anchor="middle"
+        letter-spacing="14" style="text-transform:uppercase">TUNING</text>
+
+  <!-- Red accent line – right -->
+  <line x1="330" y1="310" x2="396" y2="310" stroke="#E31E24" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
