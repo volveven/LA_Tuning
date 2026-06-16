@@ -280,6 +280,7 @@
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
+            width: 100%;
             opacity: 0;
             animation: fadeInBody 0.8s ease forwards;
         }
@@ -980,7 +981,7 @@
         ============================ */
         * { -webkit-tap-highlight-color: transparent; }
         html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-        body { -webkit-overflow-scrolling: touch; padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
+        body { -webkit-overflow-scrolling: touch; }
         input, button, select, textarea { font-size: 16px; /* Prevents iOS zoom on focus */ }
         button, a { touch-action: manipulation; }
         img { -webkit-user-drag: none; user-select: none; }
@@ -1060,13 +1061,12 @@
             .usp-card h3 { font-size: 0.95rem; }
             .usp-card p { font-size: 0.82rem; }
             .usp-icon { width: 36px; height: 36px; }
-            .stage-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-            .stage-card { padding: 28px 24px; }
+            .stage-grid { grid-template-columns: 1fr; max-width: 100%; margin: 0 auto; }
+            .stage-card { padding: 28px 20px; }
 
-            /* Pricing Tables → horizontal scroll */
-            .price-table { font-size: 0.85rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-            .price-table thead, .price-table tbody, .price-table tr, .price-table th, .price-table td { white-space: normal; }
-            .price-table th, .price-table td { padding: 12px 14px; min-width: 120px; }
+            /* Pricing Tables */
+            .price-table { font-size: 0.85rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+            .price-table th, .price-table td { padding: 12px 14px; min-width: 100px; }
             .price-table .option-name { font-size: 0.9rem; }
             .price-table .option-desc { font-size: 0.78rem; }
 
@@ -1078,8 +1078,10 @@
             .contact-cta h3 { font-size: 1.4rem; }
             .btn-whatsapp-large { padding: 16px 30px; font-size: 1rem; width: 100%; justify-content: center; }
 
-            /* Scroll Animation */
-            .frame-overlay { padding: 24px 20px; }
+            /* Scroll Animation - full width, edge to edge */
+            .scroll-story { padding-left: 0; padding-right: 0; }
+            .scroll-sequence { width: 100vw; margin-left: calc(-50vw + 50%); border-radius: 0; }
+            .frame-overlay { padding: 24px 20px; padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
             .frame-text h3 { font-size: 1.3rem; }
             .frame-text p { font-size: 0.88rem; }
             .scroll-progress-bar { right: 12px; height: 100px; }
@@ -1107,15 +1109,18 @@
 
             /* Back to Top */
             .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+
+            /* Container on mobile */
+            .container { padding: 0 16px; }
         }
 
         /* ============================
            SMALL PHONES (max 480px)
         ============================ */
         @media (max-width: 480px) {
-            .container { padding: 0 16px; }
+            .container { padding: 0 12px; }
             .usp-grid { grid-template-columns: 1fr; gap: 10px; }
-            .usp-card { padding: 20px 16px; text-align: left; display: flex; gap: 16px; align-items: center; }
+            .usp-card { padding: 18px 14px; text-align: left; display: flex; gap: 14px; align-items: center; }
             .usp-icon { margin: 0; width: 32px; height: 32px; flex-shrink: 0; }
             .usp-card h3 { font-size: 0.9rem; margin-bottom: 4px; }
             .usp-card p { font-size: 0.8rem; }
@@ -1124,8 +1129,8 @@
             .hero-subtext { font-size: 0.88rem; }
             .hero-logo { width: 150px; }
 
-            .btn { width: 100%; justify-content: center; padding: 14px 24px; font-size: 0.95rem; }
-            .hero-btns { flex-direction: column; align-items: stretch; padding: 0 10px; gap: 12px; }
+            .btn { width: 100%; justify-content: center; padding: 14px 20px; font-size: 0.95rem; }
+            .hero-btns { flex-direction: column; align-items: stretch; padding: 0 8px; gap: 12px; }
 
             /* Hide description column on very small screens */
             .price-table th:nth-child(2), .price-table td:nth-child(2) { display: none; }
@@ -1152,14 +1157,15 @@
            EXTRA SMALL PHONES (max 360px)
         ============================ */
         @media (max-width: 360px) {
+            .container { padding: 0 10px; }
             .hero-slogan { font-size: 1.15rem; }
             .hero-logo { width: 130px; }
             .nav-links { width: 240px; }
-            .stage-card { padding: 24px 18px; }
+            .stage-card { padding: 20px 14px; }
             .stage-price { font-size: 1.6rem; }
-            .btn { padding: 12px 20px; font-size: 0.88rem; }
+            .btn { padding: 12px 16px; font-size: 0.88rem; }
             .footer-slogan { font-size: 0.8rem; }
-            .frame-overlay { padding: 20px 14px; }
+            .frame-overlay { padding: 16px 12px; }
         }
 
         /* ============================
