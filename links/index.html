@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>LA Tuning | Offizielle Links – Instagram, TikTok &amp; WhatsApp</title>
+    <meta name="description" content="Alle offiziellen Kanäle von LA Tuning auf einen Blick: WhatsApp-Chat, Instagram, TikTok, interaktiver Fahrzeugkonfigurator &amp; offizielle Website.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.latuning.de/links">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.latuning.de/links">
+    <meta property="og:title" content="LA Tuning | Offizielle Links">
+    <meta property="og:description" content="Chiptuning &amp; Softwareoptimierung in Landshut. Kontaktiere uns direkt per WhatsApp, Instagram oder TikTok.">
+    <meta property="og:image" content="https://www.latuning.de/img/hero.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LA Tuning | Offizielle Links">
+    <meta name="twitter:description" content="Alle offiziellen Social-Media- &amp; Kontakt-Kanäle von LA Tuning auf einen Blick.">
+    <meta name="twitter:image" content="https://www.latuning.de/img/hero.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../img/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================================
+           RESET & CSS VARIABLES
+           ===================================================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --bg: #080808;
+            --surface: #111114;
+            --surface-2: #16161b;
+            --surface-hover: #1e1e24;
+            --red: #E31E24;
+            --red-hover: #FF2830;
+            --red-glow: rgba(227, 30, 36, 0.28);
+            --red-glow-strong: rgba(227, 30, 36, 0.55);
+            --white: #FFFFFF;
+            --gray: #92929e;
+            --gray-light: #c8c8d4;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-red: rgba(227, 30, 36, 0.4);
+            --green: #25D366;
+            --green-glow: rgba(37, 211, 102, 0.3);
+            --font-heading: 'Rajdhani', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 36px 16px 28px;
+            position: relative;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* Ambient Glow Background Effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 520px;
+            height: 380px;
+            background: radial-gradient(circle at center top, rgba(227, 30, 36, 0.22) 0%, rgba(227, 30, 36, 0.05) 50%, transparent 80%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(227, 30, 36, 0.12) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Subtle Carbon / Mesh Overlay */
+        .ambient-mesh {
+            position: fixed;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        /* Linktree Container */
+        .linktree-container {
+            width: 100%;
+            max-width: 480px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Share Button (Top Right) */
+        .share-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--gray-light);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            backdrop-filter: blur(8px);
+        }
+
+        .share-btn:hover, .share-btn:active {
+            background: rgba(227, 30, 36, 0.15);
+            border-color: var(--red);
+            color: var(--white);
+            transform: scale(1.08);
+            box-shadow: 0 0 16px var(--red-glow);
+        }
+
+        /* Profile Header */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-avatar-wrap {
+            position: relative;
+            width: 106px;
+            height: 106px;
+            margin-bottom: 16px;
+        }
+
+        .profile-avatar-glow {
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            background: conic-gradient(from 180deg at 50% 50%, var(--red) 0deg, #ff575d 90deg, #880b10 180deg, var(--red) 360deg);
+            animation: spinGlow 8s linear infinite;
+            filter: blur(4px);
+            opacity: 0.85;
+        }
+
+        @keyframes spinGlow {
+            100% { transform: rotate(360deg); }
+        }
+
+        .profile-avatar {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #0d0d10;
+            padding: 8px;
+            border: 2px solid rgba(227, 30, 36, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+        }
+
+        .profile-title {
+            font-family: var(--font-heading);
+            font-size: 1.85rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: var(--red);
+            border-radius: 50%;
+            color: var(--white);
+            box-shadow: 0 0 10px rgba(227, 30, 36, 0.6);
+        }
+
+        .profile-tagline {
+            font-size: 0.95rem;
+            color: var(--gray-light);
+            font-weight: 500;
+            max-width: 380px;
+            line-height: 1.45;
+            margin-bottom: 12px;
+        }
+
+        /* Pill Badges */
+        .profile-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 4px;
+        }
+
+        .badge-pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 0.74rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            color: var(--gray-light);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .badge-pill.highlight {
+            border-color: rgba(227, 30, 36, 0.45);
+            background: rgba(227, 30, 36, 0.08);
+            color: #ff8a8e;
+        }
+
+        /* =====================================================================
+           LINKS LIST
+           ===================================================================== */
+        .links-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            margin-top: 10px;
+        }
+
+        .link-card {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 18px;
+            text-decoration: none;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: transparent;
+            transition: all 0.25s ease;
+        }
+
+        .link-card:hover, .link-card:active {
+            transform: translateY(-3px) scale(1.01);
+            background: var(--surface-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Custom Card Themes */
+        /* 1. WHATSAPP PRIMARY */
+        .link-card.card-whatsapp {
+            background: linear-gradient(135deg, rgba(37, 211, 102, 0.1) 0%, var(--surface) 65%);
+            border-color: rgba(37, 211, 102, 0.35);
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.15);
+        }
+        .link-card.card-whatsapp::before {
+            background: var(--green);
+        }
+        .link-card.card-whatsapp:hover {
+            border-color: var(--green);
+            box-shadow: 0 10px 32px var(--green-glow);
+        }
+        .link-card.card-whatsapp .card-icon {
+            background: rgba(37, 211, 102, 0.15);
+            color: var(--green);
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+
+        /* 2. INSTAGRAM */
+        .link-card.card-instagram:hover {
+            border-color: #E1306C;
+            box-shadow: 0 10px 30px rgba(225, 48, 108, 0.25);
+        }
+        .link-card.card-instagram:hover::before {
+            background: linear-gradient(180deg, #F56040, #E1306C, #833AB4);
+        }
+        .link-card.card-instagram .card-icon {
+            background: rgba(225, 48, 108, 0.1);
+            color: #E1306C;
+            border-color: rgba(225, 48, 108, 0.25);
+        }
+
+        /* 3. TIKTOK */
+        .link-card.card-tiktok:hover {
+            border-color: #00f2fe;
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.25);
+        }
+        .link-card.card-tiktok:hover::before {
+            background: linear-gradient(180deg, #00f2fe, #fe0979);
+        }
+        .link-card.card-tiktok .card-icon {
+            background: rgba(0, 242, 254, 0.1);
+            color: #00f2fe;
+            border-color: rgba(0, 242, 254, 0.25);
+        }
+
+        /* 4. KONFIGURATOR HIGHLIGHT */
+        .link-card.card-konfigurator {
+            background: linear-gradient(135deg, rgba(227, 30, 36, 0.14) 0%, var(--surface) 70%);
+            border-color: var(--border-red);
+            box-shadow: 0 6px 24px var(--red-glow);
+        }
+        .link-card.card-konfigurator::before {
+            background: var(--red);
+        }
+        .link-card.card-konfigurator:hover {
+            border-color: var(--red);
+            box-shadow: 0 10px 34px var(--red-glow-strong);
+        }
+        .link-card.card-konfigurator .card-icon {
+            background: rgba(227, 30, 36, 0.18);
+            color: var(--red);
+            border-color: rgba(227, 30, 36, 0.4);
+            animation: pulseIcon 2.4s ease-in-out infinite;
+        }
+
+        @keyframes pulseIcon {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); filter: drop-shadow(0 0 6px rgba(227, 30, 36, 0.8)); }
+        }
+
+        /* Card Icon Box */
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--white);
+            transition: all 0.25s ease;
+        }
+
+        .card-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Card Text Content */
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-title-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .card-title {
+            font-family: var(--font-heading);
+            font-size: 1.18rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            color: var(--white);
+            line-height: 1.25;
+        }
+
+        .card-badge {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 2px 7px;
+            border-radius: 10px;
+            line-height: 1.3;
+        }
+
+        .badge-live {
+            background: rgba(37, 211, 102, 0.2);
+            color: #25D366;
+            border: 1px solid rgba(37, 211, 102, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .badge-live::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #25D366;
+            animation: pulseDot 1.6s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        .badge-hot {
+            background: rgba(227, 30, 36, 0.2);
+            color: #ff6469;
+            border: 1px solid rgba(227, 30, 36, 0.4);
+        }
+
+        .card-subtitle {
+            font-size: 0.82rem;
+            color: var(--gray);
+            margin-top: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.3;
+        }
+
+        .card-arrow {
+            color: var(--gray);
+            flex-shrink: 0;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .link-card:hover .card-arrow {
+            transform: translateX(3px);
+            color: var(--white);
+        }
+
+        /* =====================================================================
+           DIRECT CONTACT & LOCATION CARD
+           ===================================================================== */
+        .info-card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .info-title {
+            font-family: var(--font-heading);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--gray-light);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .info-meta {
+            font-size: 0.83rem;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .info-meta a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .info-meta a:hover {
+            color: var(--red);
+        }
+
+        /* Quick Icon Bar */
+        .quick-icon-bar {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            margin-top: 14px;
+        }
+
+        .quick-icon-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .quick-icon-btn:hover {
+            color: var(--white);
+            border-color: var(--red);
+            background: rgba(227, 30, 36, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================================
+           FOOTER
+           ===================================================================== */
+        .linktree-footer {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 0.78rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .footer-legal-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+
+        .footer-legal-links a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-copy {
+            color: rgba(255, 255, 255, 0.28);
+            font-size: 0.72rem;
+        }
+
+        /* Toast Notification for Share / Copy */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #1e1e24;
+            border: 1px solid var(--red);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+            z-index: 999;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 380px) {
+            body { padding: 24px 12px 20px; }
+            .profile-avatar-wrap { width: 92px; height: 92px; }
+            .profile-title { font-size: 1.6rem; }
+            .link-card { padding: 14px 14px; gap: 12px; }
+            .card-icon { width: 42px; height: 42px; }
+            .card-icon svg { width: 20px; height: 20px; }
+            .card-title { font-size: 1.05rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-mesh"></div>
+
+    <div class="linktree-container">
+        <!-- Share Button -->
+        <button class="share-btn" id="btnShare" aria-label="Seite teilen" title="Link teilen">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+        </button>
+
+        <!-- Profile Header -->
+        <header class="profile-header">
+            <div class="profile-avatar-wrap">
+                <div class="profile-avatar-glow"></div>
+                <div class="profile-avatar">
+                    <img src="../img/logo.png" alt="LA Tuning Logo" onerror="this.onerror=null; this.src='/img/logo.png';">
+                </div>
+            </div>
+
+            <h1 class="profile-title">
+                LA Tuning
+                <span class="verified-badge" title="Offizielles Profil">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </span>
+            </h1>
+
+            <p class="profile-tagline">
+                Professionelle Softwareoptimierung &amp; Chiptuning in Landshut &amp; Umgebung.
+            </p>
+
+            <div class="profile-badges">
+                <span class="badge-pill highlight">⚡ Stage 1 &amp; Stage 2</span>
+                <span class="badge-pill">🚀 V-Max Aufhebung</span>
+                <span class="badge-pill">📍 Landshut / Adlkofen</span>
+            </div>
+        </header>
+
+        <!-- Main Links List -->
+        <main class="links-list">
+
+            <!-- 1. WHATSAPP (PRIMARY CALL TO ACTION) -->
+            <a href="https://wa.me/491772253484?text=Hallo%20LA%20Tuning%2C%20ich%20habe%20eure%20Links%20gesehen%20und%20interessiere%20mich%20f%C3%BCr%20eine%20Leistungssteigerung%20%2F%20Softwareoptimierung." 
+               class="link-card card-whatsapp" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">WhatsApp Chat &amp; Termine</span>
+                        <span class="card-badge badge-live">Online</span>
+                    </div>
+                    <p class="card-subtitle">Direkte Beratung &amp; schnelle Preisauskunft</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 2. INSTAGRAM -->
+            <a href="https://www.instagram.com/la_tuningg" 
+               class="link-card card-instagram" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">Instagram (@la_tuningg)</span>
+                    </div>
+                    <p class="card-subtitle">Umbauten, Stories &amp; Soundchecks</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 3. TIKTOK -->
+            <a href="https://www.tiktok.com/@la_tuningg" 
+               class="link-card card-tiktok" 
+               target="_blank" 
+               rel="noopener noreferrer">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">TikTok (@la_tuningg)</span>
+                    </div>
+                    <p class="card-subtitle">Dyno-Runs, Pops &amp; Bangs &amp; Clips</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 4. FAHRZEUG-KONFIGURATOR (KEY FEATURE) -->
+            <a href="https://www.latuning.de/#konfigurator" 
+               class="link-card card-konfigurator">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">Fahrzeug-Konfigurator</span>
+                        <span class="card-badge badge-hot">560+ Modelle</span>
+                    </div>
+                    <p class="card-subtitle">Berechne sofort PS &amp; Nm für dein Auto</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 5. PREISE & LEISTUNGEN -->
+            <a href="https://www.latuning.de/#preise" 
+               class="link-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">Preise &amp; Leistungen</span>
+                    </div>
+                    <p class="card-subtitle">Stage 1 ab 249 €, Getriebe &amp; Zusatzoptionen</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 6. OFFIZIELLE HOMEPAGE -->
+            <a href="https://www.latuning.de/" 
+               class="link-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">Offizielle Website</span>
+                    </div>
+                    <p class="card-subtitle">latuning.de • Alle Infos &amp; Galerie</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+            <!-- 7. DIREKTER ANRUF -->
+            <a href="tel:+491772253484" 
+               class="link-card">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-title-row">
+                        <span class="card-title">Direkt anrufen</span>
+                    </div>
+                    <p class="card-subtitle">+49 177 2253484 (Mo – Sa)</p>
+                </div>
+                <div class="card-arrow">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </a>
+
+        </main>
+
+        <!-- Location & Contact Info Card -->
+        <div class="info-card">
+            <div class="info-title">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1-18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Standort Landshut / Adlkofen
+            </div>
+            <p class="info-meta">
+                Am Bäckergarten 9, 84166 Adlkofen<br>
+                E-Mail: <a href="mailto:la_tuning@outlook.com">la_tuning@outlook.com</a>
+            </p>
+
+            <div class="quick-icon-bar">
+                <a href="https://wa.me/491772253484" class="quick-icon-btn" title="WhatsApp" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/la_tuningg" class="quick-icon-btn" title="Instagram" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.tiktok.com/@la_tuningg" class="quick-icon-btn" title="TikTok" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+                    </svg>
+                </a>
+                <a href="tel:+491772253484" class="quick-icon-btn" title="Telefon">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Legal Links -->
+        <footer class="linktree-footer">
+            <div class="footer-legal-links">
+                <a href="../impressum.html">Impressum</a>
+                <span>•</span>
+                <a href="../datenschutz.html">Datenschutz</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 LA Tuning. Alle Rechte vorbehalten.
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toastNotice">Link in Zwischenablage kopiert!</div>
+
+    <!-- Script for Share & Copy -->
+    <script>
+        (function() {
+            var btnShare = document.getElementById('btnShare');
+            var toast = document.getElementById('toastNotice');
+
+            function showToast(msg) {
+                if (msg) toast.textContent = msg;
+                toast.classList.add('show');
+                setTimeout(function() {
+                    toast.classList.remove('show');
+                }, 2500);
+            }
+
+            if (btnShare) {
+                btnShare.addEventListener('click', function() {
+                    var shareData = {
+                        title: 'LA Tuning | Offizielle Links',
+                        text: 'Finde alle Links von LA Tuning auf einen Blick (WhatsApp, Instagram, TikTok & Konfigurator):',
+                        url: window.location.href
+                    };
+
+                    if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+                        navigator.share(shareData).catch(function(err) {
+                            if (err.name !== 'AbortError') copyToClipboard();
+                        });
+                    } else {
+                        copyToClipboard();
+                    }
+                });
+            }
+
+            function copyToClipboard() {
+                var url = window.location.href;
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(url).then(function() {
+                        showToast('✓ Link kopiert!');
+                    }).catch(function() {
+                        fallbackCopy(url);
+                    });
+                } else {
+                    fallbackCopy(url);
+                }
+            }
+
+            function fallbackCopy(text) {
+                var textArea = document.createElement('textarea');
+                textArea.value = text;
+                textArea.style.position = 'fixed';
+                textArea.style.left = '-9999px';
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showToast('✓ Link kopiert!');
+                } catch (err) {
+                    showToast('latuning.de/links');
+                }
+                document.body.removeChild(textArea);
+            }
+        })();
+    </script>
+</body>
+</html>
