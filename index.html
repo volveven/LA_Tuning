@@ -2359,13 +2359,42 @@
         color: var(--white);
     }
 
-    /* =========================================================================
-       RESPONSIVE BREAKPOINTS
-       ========================================================================= */
+    /* ==========================================================================
+       COMPREHENSIVE RESPONSIVE DESIGN SYSTEM (ANDROID, IPHONE, TABLETS, IPADS)
+       ========================================================================== */
+
+    /* Global Mobile Guard */
+    html {
+        overflow-x: hidden;
+        -webkit-text-size-adjust: 100%;
+    }
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Prevent mobile input zoom on iOS & Android */
+    input, select, textarea {
+        font-size: 16px !important;
+    }
+
+    /* --------------------------------------------------------------------------
+       1. TABLET LANDSCAPE & IPAD PRO (<= 1024px)
+       -------------------------------------------------------------------------- */
     @media (max-width: 1024px) {
+        .container {
+            padding: 0 20px;
+        }
+        .hero {
+            padding: 120px 0 60px;
+        }
         .hero-grid {
             grid-template-columns: 1fr;
             text-align: center;
+            gap: 36px;
         }
         .hero-content {
             max-width: 100%;
@@ -2374,74 +2403,696 @@
             justify-content: center;
         }
         .hero-pillars {
-            max-width: 500px;
+            max-width: 600px;
+            margin: 24px auto 0;
+            justify-content: center;
+        }
+        .hero-car-card {
+            max-width: 700px;
             margin: 0 auto;
         }
         .sim-dashboard {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .sim-dashboard > .gauge-card:last-child {
+            grid-column: span 2;
         }
         .process-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
         .pricing-grid {
             grid-template-columns: 1fr;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 480px;
+            margin: 0 auto 36px;
         }
         .region-info-grid {
             grid-template-columns: 1fr;
+            gap: 24px;
         }
         .contact-grid {
             grid-template-columns: 1fr;
+            gap: 30px;
         }
         .footer-grid {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .footer-brand {
+            grid-column: span 2;
         }
     }
 
+    /* --------------------------------------------------------------------------
+       2. TABLETS PORTRAIT, IPADS & LARGE PHONES (<= 768px)
+       -------------------------------------------------------------------------- */
     @media (max-width: 768px) {
+        /* General Layout */
+        .container {
+            padding: 0 16px;
+        }
+        .section-header {
+            margin-bottom: 28px;
+        }
+        .section-title {
+            font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+            line-height: 1.15;
+            word-break: break-word;
+        }
+        .section-subtitle {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .section-eyebrow {
+            font-size: 0.8rem;
+            padding: 5px 12px;
+        }
+
+        /* Navbar & Mobile Drawer */
+        .navbar {
+            height: 68px;
+        }
+        .nav-logo img, .nav-logo svg {
+            height: 36px;
+        }
         .nav-links, .nav-actions .btn {
             display: none;
         }
         .nav-toggle {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--white);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .nav-toggle.active {
+            background: rgba(227, 30, 36, 0.2);
+            border-color: var(--red);
+            color: var(--red-light);
         }
         .nav-links.mobile-open {
             display: flex;
             flex-direction: column;
-            position: absolute;
-            top: 76px;
+            position: fixed;
+            top: 68px;
             left: 0;
             right: 0;
-            background: #09090c;
-            border-bottom: 1px solid var(--border-red);
-            padding: 24px;
-            gap: 18px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+            bottom: 0;
+            background: rgba(9, 9, 13, 0.98);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            padding: 20px 16px calc(90px + env(safe-area-inset-bottom));
+            gap: 10px;
+            overflow-y: auto;
+            z-index: 1000;
+            border-top: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
         }
-        .cfg-comparison-grid {
-            grid-template-columns: 1fr;
+        .nav-links.mobile-open li {
+            width: 100%;
         }
-        .sim-specs-strip {
-            grid-template-columns: 1fr;
+        .nav-links.mobile-open a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 1.15rem;
+            color: var(--white);
+            width: 100%;
         }
+        .nav-links.mobile-open a:hover, .nav-links.mobile-open a:active {
+            background: rgba(227, 30, 36, 0.15);
+            border-color: var(--red);
+        }
+
+        /* Hero */
         .hero {
-            padding: 120px 0 60px;
+            padding: 100px 0 45px;
         }
-        .section-header {
-            margin-bottom: 36px;
+        .hero-title {
+            font-size: clamp(1.9rem, 7.5vw, 3.2rem);
+            line-height: 1.1;
+            word-break: break-word;
+            margin-bottom: 16px;
         }
-        .process-grid {
-            grid-template-columns: 1fr;
+        .hero-desc {
+            font-size: 0.98rem;
+            line-height: 1.55;
+            margin-bottom: 24px;
+        }
+        .hero-ctas {
+            flex-direction: column;
+            width: 100%;
+            gap: 12px;
+        }
+        .hero-ctas .btn {
+            width: 100%;
+            justify-content: center;
+            height: 52px;
+            font-size: 1.05rem;
+        }
+        .hero-pillars {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            width: 100%;
+            margin: 20px 0 0;
+            text-align: left;
+        }
+        .pillar-item {
+            font-size: 0.92rem;
+        }
+        .hero-car-card {
+            border-radius: var(--radius-sm);
+            margin-top: 10px;
         }
         .telemetry-badge {
             position: static;
-            margin: 12px auto;
-            display: inline-block;
+            margin: 12px auto 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            font-size: 0.85rem;
+        }
+
+        /* Trust Strip */
+        .trust-strip {
+            padding: 24px 0;
+        }
+        .trust-strip-inner {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .engine-chips {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            width: 100%;
+            padding-bottom: 6px;
+            gap: 8px;
+            scrollbar-width: none;
+        }
+        .engine-chips::-webkit-scrollbar {
+            display: none;
+        }
+        .engine-chip {
+            flex-shrink: 0;
+            white-space: nowrap;
+            font-size: 0.82rem;
+            padding: 6px 12px;
+        }
+
+        /* Section Spacing & Card Padding */
+        .simulator-section,
+        .configurator-section,
+        .sound-section,
+        .process-section,
+        .pricing-section,
+        .region-section,
+        .faq-section,
+        .contact-section {
+            padding: 55px 0;
+        }
+        .sim-card,
+        .sound-card,
+        .region-card,
+        .contact-info-card,
+        .cfg-card,
+        .cfg-result-card {
+            padding: 22px 16px;
+            border-radius: var(--radius-md);
+        }
+
+        /* 1. Dyno Simulator Mobile */
+        .sim-controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+            margin-bottom: 24px;
+            width: 100%;
+        }
+        .sim-btn {
+            padding: 10px 4px;
+            font-size: 0.85rem;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 0;
+            white-space: nowrap;
+        }
+        .sim-dashboard {
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .sim-dashboard > .gauge-card:last-child {
+            grid-column: span 1;
+        }
+        .gauge-card {
+            padding: 20px 16px;
+        }
+        .gauge-svg-wrap {
+            width: 150px;
+            height: 90px;
+        }
+        .gauge-val-display {
+            font-size: 2rem;
+        }
+        .sim-specs-strip {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            padding: 16px;
+        }
+        .sim-specs-strip > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .sim-specs-strip > div:last-child {
+            border-bottom: none;
+        }
+        .spec-box-val {
+            font-size: 1.35rem;
+            order: 2;
+        }
+        .spec-box-label {
+            font-size: 0.85rem;
+            order: 1;
+        }
+
+        /* 2. Vehicle Configurator Mobile */
+        .brand-chips-wrap {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            gap: 8px;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
+            scrollbar-width: none;
+        }
+        .brand-chips-wrap::-webkit-scrollbar {
+            display: none;
+        }
+        .brand-chip {
+            flex-shrink: 0;
+            white-space: nowrap;
+            padding: 8px 15px;
+            font-size: 0.88rem;
+        }
+        .cfg-tabs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .cfg-tab {
+            width: 100%;
+            justify-content: center;
+            padding: 12px 14px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        .cfg-hsn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .cfg-hsn-grid .cfg-btn-search {
+            grid-column: span 2;
+            width: 100%;
+            justify-content: center;
+            height: 50px;
+            font-size: 1rem;
+        }
+        .cfg-fallback-grid {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        .cfg-fallback-grid .cfg-btn-search {
+            width: 100%;
+            justify-content: center;
+            height: 50px;
+        }
+        .cfg-manual-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .cfg-manual-grid .cfg-btn-search {
+            width: 100%;
+            justify-content: center;
+            height: 50px;
+        }
+        .cfg-result-card {
+            padding: 22px 16px;
+            margin-top: 20px;
+        }
+        .cfg-result-header {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .cfg-car-title h3 {
+            font-size: 1.45rem;
+            line-height: 1.2;
+        }
+        .cfg-car-title p {
+            font-size: 1.05rem;
+        }
+        .cfg-stage-selector {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+        .cfg-stage-tab {
+            width: 100%;
+            justify-content: center;
+            padding: 12px 14px;
+            font-size: 0.9rem;
+        }
+        .cfg-metrics-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+        .cfg-metric-box {
+            padding: 16px;
+        }
+        .cfg-metric-values {
+            font-size: 1.45rem;
+        }
+        .cfg-search-result-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            padding: 12px 14px;
+        }
+        .cfg-cta-row {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 16px;
+            text-align: center;
+        }
+        .cfg-price-display {
+            align-items: center;
+        }
+        .cfg-btn-wa {
+            width: 100%;
+            justify-content: center;
+            padding: 16px 20px;
+            font-size: 1.05rem;
+            min-height: 54px;
+        }
+
+        /* 3. Sound Lab Mobile */
+        .sound-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .sound-mode-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 10px 8px;
+            font-size: 0.82rem;
+            text-align: center;
+            letter-spacing: 0;
+        }
+        .waveform-visualizer {
+            height: 70px;
+            gap: 3px;
+            padding: 0 10px;
+            overflow: hidden;
+            margin-bottom: 18px;
+        }
+        .wave-bar {
+            width: 3px;
+        }
+        .sound-info-box {
+            padding: 18px 14px;
+        }
+        .sound-info-title {
+            font-size: 1.15rem;
+        }
+        .sound-info-desc {
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        /* 4. Process Section Mobile */
+        .process-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .process-card-image-wrap {
+            height: 170px;
+        }
+        .process-card-content {
+            padding: 18px 16px;
+        }
+        .process-title {
+            font-size: 1.2rem;
+        }
+        .process-desc {
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        /* 5. Pricing Section Mobile */
+        .pricing-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 100%;
+            margin-bottom: 28px;
+        }
+        .pricing-card {
+            padding: 26px 18px;
+        }
+        .pricing-name {
+            font-size: 1.45rem;
+        }
+        .pricing-amount {
+            font-size: 2.2rem;
+        }
+        .pricing-card .btn {
+            width: 100%;
+            justify-content: center;
+            height: 48px;
+        }
+        .extras-wrap {
+            padding: 20px 16px;
+        }
+        .extras-title {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+        }
+        .extras-grid {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .extra-item {
+            padding: 14px 16px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .extra-price {
+            margin-left: 0;
+            font-size: 1.15rem;
+        }
+        .pricing-tax-note {
+            padding: 14px 16px;
+            font-size: 0.82rem;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        /* 6. Region Section Mobile */
+        .region-selector {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            width: 100%;
+            margin-bottom: 22px;
+        }
+        .region-btn {
+            width: 100%;
+            justify-content: center;
+            padding: 10px 8px;
+            font-size: 0.82rem;
+            text-align: center;
+            letter-spacing: 0;
+        }
+        .region-info-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+        .region-meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+        }
+        .region-badge {
+            font-size: 0.85rem;
+            width: 100%;
+        }
+
+        /* 7. FAQ Mobile */
+        .faq-trigger {
+            padding: 18px 16px;
+            font-size: 1.05rem;
+            gap: 12px;
+        }
+        .faq-content-inner {
+            padding: 0 16px 18px;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        /* 8. Contact & Footer Mobile */
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .contact-info-card {
+            padding: 22px 16px;
+        }
+        .contact-title {
+            font-size: 1.7rem;
+        }
+        .contact-subtitle {
+            font-size: 0.92rem;
+            margin-bottom: 22px;
+        }
+        .contact-details {
+            gap: 16px;
+            margin-bottom: 26px;
+        }
+        .contact-icon-box {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+        }
+        .contact-row-title {
+            font-size: 0.98rem;
+        }
+        .contact-row-desc {
+            font-size: 0.85rem;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        .footer-bottom {
+            flex-direction: column;
+            text-align: center;
+            gap: 8px;
+            padding-bottom: 85px; /* Leave room for mobile sticky bar */
         }
     }
-    
+
+    /* --------------------------------------------------------------------------
+       3. ULTRA-COMPACT SMARTPHONES (ANDROID 360px & IPHONE SE) (<= 400px)
+       -------------------------------------------------------------------------- */
+    @media (max-width: 400px) {
+        .container {
+            padding: 0 12px;
+        }
+        .hero-title {
+            font-size: 1.75rem;
+        }
+        .sim-btn {
+            font-size: 0.78rem;
+            padding: 8px 2px;
+        }
+        .sound-controls {
+            grid-template-columns: 1fr;
+        }
+        .region-selector {
+            grid-template-columns: 1fr;
+        }
+        .cfg-hsn-grid {
+            grid-template-columns: 1fr;
+        }
+        .cfg-hsn-grid .cfg-btn-search {
+            grid-column: span 1;
+        }
+    }
+
+    /* --------------------------------------------------------------------------
+       4. MOBILE STICKY BOTTOM ACTION BAR (CONVERSION BOOSTER)
+       -------------------------------------------------------------------------- */
+    .mobile-sticky-bar {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .mobile-sticky-bar {
+            display: grid;
+            grid-template-columns: 1.15fr 0.95fr 1.15fr;
+            gap: 8px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(9, 9, 13, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border-red);
+            padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+            z-index: 999;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.85);
+        }
+        .mobile-bar-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 10px 4px;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            white-space: nowrap;
+        }
+        .mobile-bar-btn.btn-wa {
+            background: #25D366;
+            color: #000;
+            font-weight: 800;
+        }
+        .mobile-bar-btn.btn-call {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+            border: 1px solid var(--border);
+        }
+        .mobile-bar-btn.btn-calc {
+            background: var(--red);
+            color: var(--white);
+            box-shadow: 0 0 12px var(--red-glow);
+        }
+    }
     </style>
 </head>
 <body>
@@ -2494,7 +3145,7 @@
 
                         <h1 class="hero-title">
                             MAXIMALE PERFORMANCE.<br>
-                            <span class="text-gradient-red">CHIPTUNING &amp; KENNFIELDOPTIMIERUNG</span><br>
+                            <span class="text-gradient-red">CHIPTUNING &amp; KENNFELDOPTIMIERUNG</span><br>
                             IN LANDSHUT &amp; UMGEBUNG.
                         </h1>
 
@@ -3441,13 +4092,32 @@
         });
 
         if (navToggle && navLinks) {
-            navToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('mobile-open');
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var isOpen = navLinks.classList.toggle('mobile-open');
+                navToggle.classList.toggle('active', isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
             });
             navLinks.querySelectorAll('a').forEach(function(link) {
                 link.addEventListener('click', function() {
                     navLinks.classList.remove('mobile-open');
+                    navToggle.classList.remove('active');
+                    document.body.style.overflow = '';
                 });
+            });
+            document.addEventListener('click', function(e) {
+                if (!navbar.contains(e.target) && navLinks.classList.contains('mobile-open')) {
+                    navLinks.classList.remove('mobile-open');
+                    navToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
+                    navLinks.classList.remove('mobile-open');
+                    navToggle.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
             });
         }
 
@@ -3605,5 +4275,21 @@
 
     })();
     </script>
+    <!-- Floating Mobile Quick Action Bar (Android / iPhone / iPad) -->
+    <div class="mobile-sticky-bar" id="mobileStickyBar">
+        <a href="https://wa.me/491772253484?text=Hallo%20LA%20Tuning%2C%20ich%20habe%20eine%20Frage%20zu%20einer%20Leistungsoptimierung." class="mobile-bar-btn btn-wa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span>WhatsApp</span>
+        </a>
+        <a href="tel:+491772253484" class="mobile-bar-btn btn-call">
+            <svg class="svg-stroke" viewBox="0 0 24 24" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Anrufen</span>
+        </a>
+        <a href="#konfigurator" class="mobile-bar-btn btn-calc">
+            <svg class="svg-stroke" viewBox="0 0 24 24" width="18" height="18"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.93 15.93 12 12"/><path d="M2 12h2"/><path d="M20.4 17.6A9 9 0 1 0 3.6 17.6"/></svg>
+            <span>Rechner</span>
+        </a>
+    </div>
+
 </body>
 </html>
