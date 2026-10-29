@@ -345,7 +345,9 @@
     .text-gradient-red {
         background: linear-gradient(135deg, #ffffff 15%, #ff5258 60%, var(--red) 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
+        color: var(--red-light);
     }
 
     .section-eyebrow {
@@ -2398,6 +2400,7 @@
         }
         .hero-content {
             max-width: 100%;
+            margin: 0 auto;
         }
         .hero-ctas {
             justify-content: center;
@@ -2408,7 +2411,7 @@
             justify-content: center;
         }
         .hero-car-card {
-            max-width: 700px;
+            max-width: 650px;
             margin: 0 auto;
         }
         .sim-dashboard {
@@ -2445,31 +2448,48 @@
     }
 
     /* --------------------------------------------------------------------------
-       2. TABLETS PORTRAIT, IPADS & LARGE PHONES (<= 768px)
+       2. SMARTPHONES & TABLETS PORTRAIT (ANDROID, IPHONE, IPAD) (<= 768px)
+          STRICT CENTERING IN PORTRAIT MODE
        -------------------------------------------------------------------------- */
     @media (max-width: 768px) {
-        /* General Layout */
+        /* General Layout & Global Centering */
         .container {
             padding: 0 16px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
         .section-header {
-            margin-bottom: 28px;
+            text-align: center;
+            margin: 0 auto 28px auto;
+            max-width: 100%;
         }
         .section-title {
-            font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+            font-size: clamp(1.65rem, 6.8vw, 2.3rem);
             line-height: 1.15;
-            word-break: break-word;
+            text-align: center;
+            margin: 0 auto 12px auto;
+            word-break: normal;
+            overflow-wrap: break-word;
         }
         .section-subtitle {
-            font-size: 0.95rem;
+            font-size: 0.94rem;
             line-height: 1.5;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 480px;
         }
         .section-eyebrow {
-            font-size: 0.8rem;
-            padding: 5px 12px;
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto 12px auto;
+            font-size: 0.78rem;
+            padding: 5px 14px;
         }
 
-        /* Navbar & Mobile Drawer */
+        /* Navbar & Mobile Navigation Drawer */
         .navbar {
             height: 68px;
         }
@@ -2535,64 +2555,208 @@
             border-color: var(--red);
         }
 
-        /* Hero */
+        /* ----------------------------------------------------------------------
+           STARTSEITE / HERO: 100% ZENTRIERT & VOLL LESBAR
+           ---------------------------------------------------------------------- */
         .hero {
-            padding: 100px 0 45px;
+            padding: 95px 0 35px;
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+        }
+        .hero-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            gap: 24px;
+            margin: 0 auto;
+        }
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            max-width: 100%;
+            font-size: 0.74rem;
+            padding: 6px 14px;
+            line-height: 1.35;
+            margin: 0 auto 16px auto;
+            border-radius: var(--radius-sm);
+            white-space: normal;
+            word-break: normal;
+        }
+        .hero-mobile-break {
+            display: block !important;
         }
         .hero-title {
-            font-size: clamp(1.9rem, 7.5vw, 3.2rem);
-            line-height: 1.1;
-            word-break: break-word;
-            margin-bottom: 16px;
+            font-size: clamp(1.35rem, 5.8vw, 2.15rem) !important;
+            line-height: 1.18 !important;
+            text-align: center !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0 auto 16px auto !important;
+            word-break: normal !important;
+            overflow-wrap: break-word !important;
+            hyphens: auto !important;
+            -webkit-hyphens: auto !important;
+        }
+        .hero-title .text-gradient-red {
+            background: none !important;
+            -webkit-background-clip: unset !important;
+            background-clip: unset !important;
+            -webkit-text-fill-color: #ff3b42 !important;
+            color: #ff3b42 !important;
+            text-shadow: 0 0 16px rgba(227, 30, 36, 0.45) !important;
+            display: inline !important;
+        }
+        .hero-mobile-break { display: none; }
+    .hero-title br {
+            display: block;
         }
         .hero-desc {
-            font-size: 0.98rem;
+            font-size: 0.94rem;
             line-height: 1.55;
-            margin-bottom: 24px;
+            color: var(--gray-light);
+            text-align: center;
+            max-width: 480px;
+            margin: 0 auto 24px auto;
         }
         .hero-ctas {
+            display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             width: 100%;
+            max-width: 360px;
             gap: 12px;
+            margin: 0 auto 26px auto;
         }
         .hero-ctas .btn {
             width: 100%;
             justify-content: center;
-            height: 52px;
-            font-size: 1.05rem;
+            text-align: center;
+            height: 50px;
+            font-size: 0.98rem;
         }
         .hero-pillars {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
             width: 100%;
-            margin: 20px 0 0;
-            text-align: left;
+            max-width: 360px;
+            margin: 0 auto !important;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            gap: 8px;
         }
         .pillar-item {
-            font-size: 0.92rem;
-        }
-        .hero-car-card {
-            border-radius: var(--radius-sm);
-            margin-top: 10px;
-        }
-        .telemetry-badge {
-            position: static;
-            margin: 12px auto 0;
             display: flex;
-            justify-content: center;
+            align-items: center;
+            justify-content: flex-start;
             width: 100%;
-            font-size: 0.85rem;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.025);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius-sm);
+            gap: 12px;
+            color: var(--gray-light);
+            font-size: 0.88rem;
+            text-align: left;
+            box-sizing: border-box;
         }
 
-        /* Trust Strip */
+        /* Hero Visual & Telemetry Badges (Centered, Zero Overflow) */
+        .hero-visual {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 100%;
+            max-width: 380px;
+            margin: 14px auto 0 auto !important;
+            position: relative;
+        }
+        .hero-visual-glow {
+            display: none !important;
+        }
+        .hero-image-wrap {
+            width: 100%;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+            margin: 0 auto;
+        }
+        .telemetry-badge {
+            position: static !important;
+            transform: none !important;
+            animation: none !important;
+            width: 100%;
+            max-width: 360px;
+            margin: 10px auto 0 auto !important;
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            padding: 10px 16px;
+            background: rgba(14, 14, 19, 0.95);
+            border: 1px solid var(--border-red);
+            border-radius: var(--radius-sm);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            box-sizing: border-box;
+        }
+        .telemetry-badge-top,
+        .telemetry-badge-bottom {
+            top: auto !important;
+            right: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+        }
+        .telemetry-val {
+            font-size: 1.15rem;
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .telemetry-label {
+            font-size: 0.78rem;
+            color: var(--gray-light);
+            text-align: right;
+        }
+
+        /* Trust Strip Centered */
         .trust-strip {
-            padding: 24px 0;
+            padding: 20px 0;
+            text-align: center;
         }
         .trust-strip-inner {
+            display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 14px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 12px;
+            width: 100%;
+        }
+        .trust-title {
+            text-align: center;
+            width: 100%;
+            font-size: 0.82rem;
+            color: var(--gray);
         }
         .engine-chips {
             display: flex;
@@ -2600,7 +2764,8 @@
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             width: 100%;
-            padding-bottom: 6px;
+            justify-content: flex-start;
+            padding: 4px 6px 8px;
             gap: 8px;
             scrollbar-width: none;
         }
@@ -2610,11 +2775,11 @@
         .engine-chip {
             flex-shrink: 0;
             white-space: nowrap;
-            font-size: 0.82rem;
+            font-size: 0.8rem;
             padding: 6px 12px;
         }
 
-        /* Section Spacing & Card Padding */
+        /* Section Spacing & Card Padding (Clean, Centered, No Cramping) */
         .simulator-section,
         .configurator-section,
         .sound-section,
@@ -2623,7 +2788,7 @@
         .region-section,
         .faq-section,
         .contact-section {
-            padding: 55px 0;
+            padding: 50px 0;
         }
         .sim-card,
         .sound-card,
@@ -2633,47 +2798,68 @@
         .cfg-result-card {
             padding: 22px 16px;
             border-radius: var(--radius-md);
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
-        /* 1. Dyno Simulator Mobile */
+        /* 1. Dyno Simulator Mobile Centered */
         .sim-controls {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 6px;
-            margin-bottom: 24px;
+            margin: 0 auto 22px auto;
             width: 100%;
+            max-width: 360px;
         }
         .sim-btn {
             padding: 10px 4px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             width: 100%;
             text-align: center;
             letter-spacing: 0;
             white-space: nowrap;
         }
         .sim-dashboard {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto 22px auto;
             gap: 16px;
-            margin-bottom: 24px;
-        }
-        .sim-dashboard > .gauge-card:last-child {
-            grid-column: span 1;
         }
         .gauge-card {
             padding: 20px 16px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
         }
         .gauge-svg-wrap {
             width: 150px;
             height: 90px;
+            margin: 0 auto 10px auto;
         }
         .gauge-val-display {
             font-size: 2rem;
+            text-align: center;
+        }
+        .gauge-diff {
+            text-align: center;
+        }
+        .gauge-title {
+            text-align: center;
         }
         .sim-specs-strip {
             display: grid;
             grid-template-columns: 1fr;
             gap: 10px;
             padding: 16px;
+            width: 100%;
+            max-width: 380px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
         .sim-specs-strip > div {
             display: flex;
@@ -2694,16 +2880,23 @@
             order: 1;
         }
 
-        /* 2. Vehicle Configurator Mobile */
+        /* 2. Vehicle Configurator Mobile Centered */
+        .cfg-wrapper {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+        }
         .brand-chips-wrap {
             display: flex;
             flex-wrap: nowrap;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             gap: 8px;
-            padding-bottom: 8px;
-            margin-bottom: 18px;
+            padding: 4px 4px 8px;
+            margin: 0 auto 16px auto;
             scrollbar-width: none;
+            width: 100%;
+            justify-content: flex-start;
         }
         .brand-chips-wrap::-webkit-scrollbar {
             display: none;
@@ -2712,27 +2905,31 @@
             flex-shrink: 0;
             white-space: nowrap;
             padding: 8px 15px;
-            font-size: 0.88rem;
+            font-size: 0.86rem;
         }
         .cfg-tabs {
             display: grid;
             grid-template-columns: 1fr;
             gap: 8px;
-            margin-bottom: 20px;
+            margin: 0 auto 18px auto;
             padding-bottom: 0;
             border-bottom: none;
+            width: 100%;
+            max-width: 400px;
         }
         .cfg-tab {
             width: 100%;
             justify-content: center;
             padding: 12px 14px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-align: center;
         }
         .cfg-hsn-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
         }
         .cfg-hsn-grid .cfg-btn-search {
             grid-column: span 2;
@@ -2744,6 +2941,8 @@
         .cfg-fallback-grid {
             grid-template-columns: 1fr;
             gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
         }
         .cfg-fallback-grid .cfg-btn-search {
             width: 100%;
@@ -2754,6 +2953,8 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
         }
         .cfg-manual-grid .cfg-btn-search {
             width: 100%;
@@ -2762,19 +2963,23 @@
         }
         .cfg-result-card {
             padding: 22px 16px;
-            margin-top: 20px;
+            margin: 20px auto 0 auto;
+            max-width: 440px;
         }
         .cfg-result-header {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            text-align: center;
             gap: 10px;
         }
         .cfg-car-title h3 {
             font-size: 1.45rem;
             line-height: 1.2;
+            text-align: center;
         }
         .cfg-car-title p {
             font-size: 1.05rem;
+            text-align: center;
         }
         .cfg-stage-selector {
             display: grid;
@@ -2787,6 +2992,12 @@
             justify-content: center;
             padding: 12px 14px;
             font-size: 0.9rem;
+        }
+        .cfg-stage-badge {
+            display: block;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            width: fit-content;
         }
         .cfg-metrics-grid {
             grid-template-columns: 1fr;
@@ -2812,6 +3023,7 @@
         }
         .cfg-price-display {
             align-items: center;
+            text-align: center;
         }
         .cfg-btn-wa {
             width: 100%;
@@ -2821,13 +3033,18 @@
             min-height: 54px;
         }
 
-        /* 3. Sound Lab Mobile */
+        /* 3. Sound Lab Mobile Centered */
+        .sound-card {
+            max-width: 440px;
+            margin: 0 auto;
+        }
         .sound-controls {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
             width: 100%;
-            margin-bottom: 20px;
+            max-width: 380px;
+            margin: 0 auto 18px auto;
         }
         .sound-mode-btn {
             width: 100%;
@@ -2842,32 +3059,48 @@
             gap: 3px;
             padding: 0 10px;
             overflow: hidden;
-            margin-bottom: 18px;
+            margin: 0 auto 18px auto;
+            max-width: 380px;
         }
         .wave-bar {
             width: 3px;
         }
         .sound-info-box {
             padding: 18px 14px;
+            max-width: 380px;
+            margin: 0 auto;
+            text-align: center;
         }
         .sound-info-title {
             font-size: 1.15rem;
+            text-align: center;
         }
         .sound-info-desc {
             font-size: 0.88rem;
             line-height: 1.5;
+            text-align: center;
         }
 
-        /* 4. Process Section Mobile */
+        /* 4. Process Section Mobile Centered */
         .process-grid {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 16px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .process-card {
+            width: 100%;
+            box-sizing: border-box;
         }
         .process-card-image-wrap {
             height: 170px;
         }
         .process-card-content {
             padding: 18px 16px;
+            text-align: left;
         }
         .process-title {
             font-size: 1.2rem;
@@ -2877,21 +3110,30 @@
             line-height: 1.5;
         }
 
-        /* 5. Pricing Section Mobile */
+        /* 5. Pricing Section Mobile Centered */
         .pricing-grid {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
-            max-width: 100%;
-            margin-bottom: 28px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 28px auto;
         }
         .pricing-card {
             padding: 26px 18px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
         }
         .pricing-name {
             font-size: 1.45rem;
         }
         .pricing-amount {
             font-size: 2.2rem;
+        }
+        .pricing-features {
+            text-align: left;
         }
         .pricing-card .btn {
             width: 100%;
@@ -2900,10 +3142,14 @@
         }
         .extras-wrap {
             padding: 20px 16px;
+            max-width: 440px;
+            margin: 0 auto;
+            box-sizing: border-box;
         }
         .extras-title {
             font-size: 1.25rem;
             margin-bottom: 16px;
+            text-align: center;
         }
         .extras-grid {
             grid-template-columns: 1fr;
@@ -2923,17 +3169,25 @@
             padding: 14px 16px;
             font-size: 0.82rem;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            text-align: center;
             gap: 8px;
+            max-width: 440px;
+            margin: 20px auto 0 auto;
         }
 
-        /* 6. Region Section Mobile */
+        /* 6. Region Section Mobile Centered */
+        .region-card {
+            max-width: 440px;
+            margin: 0 auto;
+        }
         .region-selector {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 8px;
             width: 100%;
-            margin-bottom: 22px;
+            max-width: 380px;
+            margin: 0 auto 20px auto;
         }
         .region-btn {
             width: 100%;
@@ -2945,48 +3199,70 @@
         }
         .region-info-grid {
             grid-template-columns: 1fr;
-            gap: 18px;
+            gap: 16px;
+            text-align: center;
+        }
+        .region-info-card h3 {
+            text-align: center;
         }
         .region-meta {
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             gap: 8px;
         }
         .region-badge {
             font-size: 0.85rem;
             width: 100%;
+            justify-content: center;
         }
 
-        /* 7. FAQ Mobile */
+        /* 7. FAQ Mobile Centered */
+        .faq-accordion {
+            max-width: 440px;
+            margin: 0 auto;
+        }
         .faq-trigger {
             padding: 18px 16px;
             font-size: 1.05rem;
             gap: 12px;
+            text-align: left;
         }
         .faq-content-inner {
             padding: 0 16px 18px;
             font-size: 0.9rem;
             line-height: 1.55;
+            text-align: left;
         }
 
-        /* 8. Contact & Footer Mobile */
+        /* 8. Contact & Footer Mobile Centered */
         .contact-grid {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
         }
         .contact-info-card {
             padding: 22px 16px;
+            width: 100%;
+            box-sizing: border-box;
+            text-align: center;
         }
         .contact-title {
             font-size: 1.7rem;
+            text-align: center;
         }
         .contact-subtitle {
             font-size: 0.92rem;
             margin-bottom: 22px;
+            text-align: center;
         }
         .contact-details {
             gap: 16px;
             margin-bottom: 26px;
+            text-align: left;
         }
         .contact-icon-box {
             width: 38px;
@@ -3000,8 +3276,23 @@
             font-size: 0.85rem;
         }
         .footer-grid {
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
             gap: 24px;
+        }
+        .footer-brand {
+            text-align: center;
+        }
+        .footer-brand img {
+            margin: 0 auto 12px auto;
+        }
+        .footer-col-title {
+            text-align: center;
+        }
+        .footer-links-list {
+            text-align: center;
         }
         .footer-bottom {
             flex-direction: column;
@@ -3019,10 +3310,14 @@
             padding: 0 12px;
         }
         .hero-title {
-            font-size: 1.75rem;
+            font-size: 1.6rem;
+        }
+        .hero-eyebrow {
+            font-size: 0.7rem;
+            padding: 5px 10px;
         }
         .sim-btn {
-            font-size: 0.78rem;
+            font-size: 0.76rem;
             padding: 8px 2px;
         }
         .sound-controls {
@@ -3145,7 +3440,7 @@
 
                         <h1 class="hero-title">
                             MAXIMALE PERFORMANCE.<br>
-                            <span class="text-gradient-red">CHIPTUNING &amp; KENNFELDOPTIMIERUNG</span><br>
+                            <span class="text-gradient-red">CHIPTUNING &amp;<br class="hero-mobile-break">KENNFELD&shy;OPTIMIERUNG</span><br>
                             IN LANDSHUT &amp; UMGEBUNG.
                         </h1>
 
