@@ -9260,9 +9260,9 @@
                     hint.style.marginLeft = '8px';
                     hsnInput.parentNode.querySelector('.cfg-label').appendChild(hint);
                 }
-                hint.textContent = '✓ ' + HSN_MAP[hsn];
+                hint.innerHTML = '<svg class="svg-inline-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-1px;margin-right:2px;"><polyline points="20 6 9 17 4 12"/></svg> ' + HSN_MAP[hsn];
             } else if (hint) {
-                hint.textContent = '';
+                hint.innerHTML = '';
             }
 
             if (this.value.length === 4 && tsnInput.value.length >= 3) {
@@ -9345,7 +9345,7 @@
 
             searchWrapper.innerHTML = 
                 '<div style="position:relative;">' +
-                '<input type="text" id="cfgQuickSearch" class="cfg-input" placeholder="🔍 Direktsuche: Modell oder Motor eingeben (z. B. E60 535d, Golf GTI, 330d, C63, M3, RS3, 1.9 TDI)..." style="padding-left:18px;font-size:0.95rem;background:#141414;border-color:rgba(227,30,36,0.3);">' +
+                '<input type="text" id="cfgQuickSearch" class="cfg-input" placeholder="Direktsuche: Modell oder Motor eingeben (z. B. E60 535d, Golf 7 GTI, 330d, C63, M3, RS3, 1.9 TDI)..." style="padding-left:18px;font-size:0.95rem;background:#141414;border-color:rgba(227,30,36,0.3);">' +
                 '<div id="cfgQuickResults" style="display:none;position:absolute;top:100%;left:0;right:0;background:#181818;border:1px solid var(--red);border-top:none;border-radius:0 0 6px 6px;max-height:300px;overflow-y:auto;z-index:99;box-shadow:0 15px 35px rgba(0,0,0,0.85);"></div>' +
                 '</div>';
 
@@ -9408,7 +9408,7 @@
                     '</div>' +
                     '<div style="text-align:right;">' +
                     '<span style="color:#aaa;font-size:0.8rem;margin-right:8px;">Serie: ' + m.stockHp + ' PS</span>' +
-                    '<span style="color:#00e676;font-weight:700;font-size:0.85rem;">➔ ' + m.s1Hp + ' PS</span>' +
+                    '<span style="color:#00e676;font-weight:700;font-size:0.85rem;"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:-1px;margin-right:2px;"><polyline points="9 18 15 12 9 6"/></svg>' + m.s1Hp + ' PS</span>' +
                     '</div>' +
                     '</div>';
             });
@@ -9473,7 +9473,7 @@
             if (fallbackBox) {
                 var title = fallbackBox.querySelector('h4');
                 if (title && brand) {
-                    title.innerHTML = '✓ Hersteller: <strong>' + brand + '</strong> erkannt (HSN ' + hsn + ')';
+                    title.innerHTML = '<svg class="svg-inline-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" style="vertical-align:-2px;margin-right:4px;"><polyline points="20 6 9 17 4 12"/></svg> Hersteller: <strong>' + brand + '</strong> erkannt (HSN ' + hsn + ')';
                 }
                 fallbackBox.style.display = 'block';
                 fallbackBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -9645,9 +9645,9 @@
 
         var waText = 'Hallo LA Tuning,\n\n' +
             'ich habe mein Fahrzeug im Leistungsrechner konfiguriert:\n' +
-            '🚗 Fahrzeug: ' + currentCar.brand + ' ' + currentCar.model + ' ' + currentCar.engine + keyInfo + '\n' +
-            '📊 Serie: ' + stockHp + ' PS / ' + stockNm + ' Nm\n' +
-            '⚡ Wunsch-Upgrade: ' + stageName + ' auf ca. ' + targetHp + ' PS / ' + targetNm + ' Nm (+' + diffHp + ' PS / +' + diffNm + ' Nm)\n\n' +
+            '• Fahrzeug: ' + currentCar.brand + ' ' + currentCar.model + ' ' + currentCar.engine + keyInfo + '\n' +
+            '• Serie: ' + stockHp + ' PS / ' + stockNm + ' Nm\n' +
+            '• Wunsch-Upgrade: ' + stageName + ' auf ca. ' + targetHp + ' PS / ' + targetNm + ' Nm (+' + diffHp + ' PS / +' + diffNm + ' Nm)\n\n' +
             'Habt ihr in nächster Zeit einen Termin dafür frei?';
 
         var waUrl = 'https://wa.me/491772253484?text=' + encodeURIComponent(waText);
