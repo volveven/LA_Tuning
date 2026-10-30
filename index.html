@@ -60,7 +60,7 @@
           "@id": "https://www.latuning.de/#organization",
           "name": "LA Tuning",
           "alternateName": "LA Tuning Landshut – Softwareoptimierung & Chiptuning",
-          "description": "Spezialisierter Meister-Fachbetrieb für Kennfeldoptimierung, Chiptuning, TCU-Getriebeabstimmung und Fahrzeugdiagnose in Adlkofen bei Landshut. Wir bedienen Kunden aus Landshut, Dingolfing, Ergolding, Altdorf, Vilsbiburg, Moosburg, Freising und ganz Niederbayern.",
+          "description": "Spezialisierter Fachbetrieb für Kennfeldoptimierung, Chiptuning, TCU-Getriebeabstimmung und Fahrzeugdiagnose in Adlkofen bei Landshut. Wir bedienen Kunden aus Landshut, Dingolfing, Ergolding, Altdorf, Vilsbiburg, Moosburg, Freising und ganz Niederbayern.",
           "url": "https://www.latuning.de/",
           "telephone": "+49-177-2253484",
           "email": "la_tuning@outlook.com",
@@ -208,7 +208,7 @@
               "name": "Warum kommen Kunden aus Dingolfing, Ergolding und Moosburg zu LA Tuning nach Adlkofen?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "LA Tuning bietet individuelle Kennfeldprogrammierung auf Meister-Niveau ab 249 € – ohne Massen-Standardsoftware von der Stange. Unser Standort in Adlkofen ist über die B15, B15n und A92 in nur 10 bis 20 Minuten aus Landshut, Dingolfing, Vilsbiburg und Moosburg erreichbar."
+                "text": "LA Tuning bietet individuelle Kennfeldprogrammierung auf höchstem technischem Niveau ab 249 € – ohne Massen-Standardsoftware von der Stange. Unser Standort in Adlkofen ist über die B15, B15n und A92 in nur 10 bis 20 Minuten aus Landshut, Dingolfing, Vilsbiburg und Moosburg erreichbar."
               }
             },
             {
@@ -225,6 +225,14 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Ja. Vor jedem Eingriff sichern wir den originalen Datenstand Ihres Motorsteuergeräts verschlüsselt auf unseren Servern. Eine 100%ige Rückrüstung ist jederzeit problemlos möglich."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Erlischt durch Chiptuning die Betriebserlaubnis (StVZO) und kann die Software eingetragen werden?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Rechtlich gesehen führt jede Leistungssteigerung zum Erlöschen der Betriebserlaubnis nach § 19 Abs. 2 StVZO, es sei denn, die Modifikation wird durch eine amtlich anerkannte Prüforganisation (z. B. TÜV / DEKRA) abgenommen und in die Fahrzeugpapiere eingetragen. Eine Eintragung per Einzelabnahme (§ 21 StVZO) ist je nach Fahrzeugtyp nach vorheriger technischer Prüfung und gesonderter Vereinbarung möglich."
               }
             }
           ]
@@ -1974,6 +1982,83 @@
         height: 20px;
     }
 
+    /* Legal Disclaimers & StVZO Compliance */
+    .pricing-legal-disclaimer {
+        margin-top: 24px;
+        background: rgba(14, 14, 19, 0.7);
+        border: 1px solid rgba(227, 30, 36, 0.25);
+        border-radius: var(--radius-md);
+        padding: 24px 28px;
+        color: var(--gray-light);
+        font-size: 0.86rem;
+        line-height: 1.65;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+    .pricing-legal-disclaimer .legal-disclaimer-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 14px;
+        color: var(--white);
+    }
+    .pricing-legal-disclaimer .legal-disclaimer-header svg {
+        color: var(--red);
+        flex-shrink: 0;
+    }
+    .pricing-legal-disclaimer .legal-disclaimer-header h4 {
+        font-family: var(--font-heading);
+        font-size: 1.15rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0;
+        color: var(--white);
+    }
+    .pricing-legal-disclaimer p {
+        margin-bottom: 10px;
+    }
+    .pricing-legal-disclaimer p:last-child {
+        margin-bottom: 0;
+    }
+    .pricing-legal-disclaimer strong {
+        color: var(--white);
+    }
+
+    .sound-legal-note {
+        margin-top: 20px;
+        padding: 12px 18px;
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 0.84rem;
+        color: var(--gray-light);
+        line-height: 1.5;
+    }
+    .sound-legal-note svg {
+        color: var(--red);
+        flex-shrink: 0;
+    }
+    .sound-legal-note strong {
+        color: var(--white);
+    }
+
+    .footer-trademark-notice {
+        font-size: 0.76rem;
+        color: var(--gray);
+        line-height: 1.6;
+        margin-top: 14px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        text-align: left;
+    }
+    .footer-trademark-notice strong {
+        color: var(--gray-light);
+    }
+
     .extra-price {
         font-family: var(--font-heading);
         font-size: 1.25rem;
@@ -3165,6 +3250,31 @@
             margin-left: 0;
             font-size: 1.15rem;
         }
+        .pricing-legal-disclaimer {
+            padding: 18px 16px;
+            font-size: 0.8rem;
+            line-height: 1.55;
+            max-width: 440px;
+            margin: 20px auto 0 auto;
+            text-align: left;
+            box-sizing: border-box;
+        }
+        .pricing-legal-disclaimer .legal-disclaimer-header {
+            justify-content: center;
+            text-align: center;
+        }
+        .sound-legal-note {
+            flex-direction: column;
+            text-align: center;
+            padding: 14px 14px;
+            font-size: 0.8rem;
+            max-width: 380px;
+            margin: 16px auto 0 auto;
+        }
+        .footer-trademark-notice {
+            text-align: center;
+            font-size: 0.74rem;
+        }
         .pricing-tax-note {
             padding: 14px 16px;
             font-size: 0.82rem;
@@ -3435,7 +3545,7 @@
                     <div class="hero-content">
                         <div class="hero-eyebrow">
                             <span class="live-dot"></span>
-                            TÜV-konform &amp; Prüfstands-erprobt • Landshut &amp; Region
+                            Individuelle Kennfeldoptimierung • Landshut &amp; Region
                         </div>
 
                         <h1 class="hero-title">
@@ -3848,6 +3958,11 @@
                         <h4 class="sound-info-title" id="sndInfoTitle">LA Tuning Pops &amp; Bangs (Sportlich &amp; Kultiviert)</h4>
                         <p class="sound-info-desc" id="sndInfoDesc">Präzise Zündwinkelrücknahme im Schubbetrieb. Klingt kernig, sportlich und vollmundig, schont die Abgasanlage und lässt sich im Alltag jederzeit über den Fahrmodusschalter (z. B. Comfort / Sport) dezent steuern.</p>
                     </div>
+
+                    <div class="sound-legal-note">
+                        <svg class="svg-stroke" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        <span><strong>Motorsport- &amp; Akustik-Hinweis:</strong> Softwaremodifikationen mit veränderten Geräuschwerten (z. B. Race Burble / Pops &amp; Bangs) oder Kat-Anpassungen sind ausschließlich für Rennsport- und Show-Zwecke auf abgesperrten Strecken außerhalb des Geltungsbereichs der StVZO bestimmt.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -3858,7 +3973,7 @@
                 <div class="section-header">
                     <div class="section-eyebrow"><svg class="svg-stroke" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Tuning-Ablauf</div>
                     <h2 class="section-title">In 4 Schritten zu maximaler Performance</h2>
-                    <p class="section-subtitle">Transparente Meisterarbeit statt Blackbox: So läuft die professionelle Softwareabstimmung bei LA Tuning in Adlkofen ab.</p>
+                    <p class="section-subtitle">Transparente Präzisionsarbeit statt Blackbox: So läuft die professionelle Softwareabstimmung bei LA Tuning in Adlkofen ab.</p>
                 </div>
 
                 <div class="process-grid">
@@ -4009,6 +4124,26 @@
                     <span><strong>Hinweis zur Umsatzsteuer:</strong> Als Kleinunternehmer im Sinne von § 19 Abs. 1 UStG wird keine Umsatzsteuer berechnet und nicht gesondert ausgewiesen (Umsatz unterhalb der gesetzlichen Grenze). Alle angegebenen Preise sind garantierte Endpreise ohne versteckte Zusatzkosten.</span>
                 </div>
 
+                <!-- Rechtlicher Hinweis: StVZO, Betriebserlaubnis & Eintragung -->
+                <div class="pricing-legal-disclaimer">
+                    <div class="legal-disclaimer-header">
+                        <svg class="svg-stroke" viewBox="0 0 24 24" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <h4>Rechtlicher Hinweis: StVZO, Betriebserlaubnis &amp; Eintragung</h4>
+                    </div>
+                    <p>
+                        <strong>Hinweis zur Betriebserlaubnis (§ 19 Abs. 2 StVZO):</strong> Wir weisen ausdrücklich darauf hin, dass die Durchführung von Chiptuning, Kennfeldoptimierungen und Softwaremodifikationen grundsätzlich zum Erlöschen der Betriebserlaubnis des Fahrzeugs nach § 19 Abs. 2 StVZO führt, wenn die Leistungssteigerung nicht unverzüglich durch eine amtlich anerkannte Prüforganisation (z. B. TÜV, DEKRA, KÜS) abgenommen und in die Fahrzeugpapiere (Zulassungsbescheinigung Teil I und II) eingetragen wird. Das Führen eines Fahrzeugs ohne gültige Betriebserlaubnis im öffentlichen Straßenverkehr ist gesetzlich unzulässig und führt zum Verlust des Haftpflicht- und Kaskoversicherungsschutzes.
+                    </p>
+                    <p>
+                        <strong>Eintragung / Einzelabnahme (§ 21 StVZO):</strong> Eine Begutachtung und Eintragung in die Fahrzeugpapiere per Einzelabnahme ist je nach Fahrzeugtyp, Hardware-Konfiguration und Abgasnorm nach gesonderter technischer Prüfung und Absprache möglich.
+                    </p>
+                    <p>
+                        <strong>Motorsport-Funktionen:</strong> Spezielle Akustik- und Softwarefunktionen (u. a. Schubabschaltung / Pops &amp; Bangs, Kaltstart-Deaktivierung, V-Max Aufhebung sowie Deaktivierungen abgasrelevanter Systeme wie DPF/OPF/AGR/AdBlue) sind, sofern sie gesetzliche Abgas- oder Geräuschgrenzwerte verändern, ausschließlich für den Motorsport- und Renneinsatz auf abgesperrten Strecken außerhalb des Geltungsbereichs der StVZO bestimmt.
+                    </p>
+                    <p>
+                        <strong>Herstellergarantie &amp; Leistungs-Richtwerte:</strong> Durch Softwareoptimierungen können herstellerseitige Garantie- und Gewährleistungsansprüche bezüglich Antriebsstrang und Motor ganz oder teilweise erlöschen. Alle angegebenen Leistungs- und Drehmomentwerte sind Richtwerte und abhängig von Fahrzeugzustand, Serienstreuung, Kraftstoffqualität und Laufleistung. Alle Preise sind Endpreise gemäß § 19 UStG (keine gesonderte Ausweisung der Umsatzsteuer).
+                    </p>
+                </div>
+
 
                 <!-- Zusatzoptionen & Motorsport Box -->
                 <div class="extras-wrap">
@@ -4095,7 +4230,7 @@
                                 </div>
                             </div>
                             <p class="region-text" id="regText">
-                                Aus Landshut (Altstadt, Achdorf, Schönbrunn, Peter &amp; Paul) bist du in unter 10 Minuten bei uns in Adlkofen. Keine Parkplatzsuche, keine Hektik – bei uns bekommst du eine ruhige Werkstatt-Atmosphäre, professionelle Beratung und ein individuelles Kennfeld auf Meister-Niveau ab 249 €.
+                                Aus Landshut (Altstadt, Achdorf, Schönbrunn, Peter &amp; Paul) bist du in unter 10 Minuten bei uns in Adlkofen. Keine Parkplatzsuche, keine Hektik – bei uns bekommst du eine ruhige Werkstatt-Atmosphäre, professionelle Beratung und ein individuelles Kennfeld auf höchstem Qualitätsniveau ab 249 €.
                             </p>
                         </div>
 
@@ -4214,6 +4349,18 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span>Erlischt durch Chiptuning die Betriebserlaubnis (StVZO) und kann die Software eingetragen werden?</span>
+                            <span class="faq-icon-arrow"><svg class="svg-stroke" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+                        </button>
+                        <div class="faq-content">
+                            <div class="faq-content-inner">
+                                Ja, rechtlich gesehen führt jede Leistungssteigerung oder Veränderung der Motorsteuersoftware zum Erlöschen der allgemeinen Betriebserlaubnis (§ 19 Abs. 2 StVZO), solange diese nicht durch eine amtlich anerkannte Prüforganisation (z. B. TÜV, DEKRA, KÜS) abgenommen und in die Fahrzeugpapiere (Zulassungsbescheinigung) eingetragen wurde. Das Fahren ohne Betriebserlaubnis im öffentlichen Straßenverkehr ist unzulässig und führt zum Verlust des Versicherungsschutzes. Eine behördliche Eintragung per Einzelabnahme (§ 21 StVZO) ist je nach Fahrzeugmodell, Hardware-Stand und Abgasnorm nach vorheriger Prüfung und gesonderter Absprache möglich. Reine Show- und Akustik-Funktionen (wie Pops &amp; Bangs oder Kat-Deaktivierungen) sind ausschließlich für den Motorsport außerhalb des Straßenverkehrs bestimmt.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -4287,7 +4434,7 @@
                 <div class="footer-brand">
                     <img src="img/logo.png" alt="LA Tuning Logo" width="140" height="40">
                     <p>
-                        LA Tuning ist dein Meister-Fachbetrieb für Kennfeldoptimierung, Chiptuning, TCU-Getriebeabstimmung und Fahrzeugdiagnose in Adlkofen bei Landshut.
+                        LA Tuning ist dein spezialisierter Fachbetrieb für Kennfeldoptimierung, Chiptuning, TCU-Getriebeabstimmung und Fahrzeugdiagnose in Adlkofen bei Landshut.
                     </p>
                 </div>
 
@@ -4306,8 +4453,9 @@
                 <div>
                     <h4 class="footer-col-title">Rechtliches</h4>
                     <ul class="footer-links-list">
-                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="impressum.html">Impressum (§ 5 DDG)</a></li>
                         <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                        <li><a href="impressum.html#rechtliche-hinweise">StVZO &amp; Rechtshinweise</a></li>
                     </ul>
                 </div>
             </div>
@@ -4316,6 +4464,9 @@
                 <div>&copy; 2026 LA Tuning – M. Hadersdorfer. Alle Rechte vorbehalten.</div>
                 <div>Standort: Am Bäckergarten 9, 84166 Adlkofen (Landshut)</div>
                 <div style="font-size:0.8rem;color:var(--gray);margin-top:4px;">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet und ausgewiesen (Kleinunternehmerregelung).</div>
+                <div class="footer-trademark-notice">
+                    <strong>Markenrechtlicher Hinweis:</strong> Alle auf dieser Website genannten Marken-, Modell- und Herstellernamen (wie z. B. Audi, BMW, Mercedes-Benz, Volkswagen, Porsche, Seat, Cupra, Skoda, Ford u. a.) sind eingetragene Warenzeichen ihrer jeweiligen Markeninhaber. Ihre Nennung erfolgt ausschließlich zur sachgerechten Beschreibung der technischen Kompatibilität unserer Programmier- und Softwaredienstleistungen für die entsprechenden Fahrzeugtypen. Zwischen LA Tuning und den genannten Automobilherstellern besteht keinerlei wirtschaftliche Verbindung, Autorisierung oder Lizenzpartnerschaft.
+                </div>
             </div>
         </div>
     </footer>
@@ -4497,7 +4648,7 @@
 
         // 5. Local SEO Region Explorer
         var regionData = {
-            landshut: { title: 'Chiptuning für Landshut', dist: 'ca. 8–10 Minuten Fahrzeit', route: 'Direkt über B15', text: 'Aus Landshut (Altstadt, Achdorf, Schönbrunn, Peter & Paul) bist du in unter 10 Minuten bei uns in Adlkofen. Keine Parkplatzsuche, keine Hektik – bei uns bekommst du eine ruhige Werkstatt-Atmosphäre, professionelle Beratung und ein individuelles Kennfeld auf Meister-Niveau ab 249 €.' },
+            landshut: { title: 'Chiptuning für Landshut', dist: 'ca. 8–10 Minuten Fahrzeit', route: 'Direkt über B15', text: 'Aus Landshut (Altstadt, Achdorf, Schönbrunn, Peter & Paul) bist du in unter 10 Minuten bei uns in Adlkofen. Keine Parkplatzsuche, keine Hektik – bei uns bekommst du eine ruhige Werkstatt-Atmosphäre, professionelle Beratung und ein individuelles Kennfeld auf höchstem Qualitätsniveau ab 249 €.' },
             dingolfing: { title: 'Chiptuning für Dingolfing (BMW-Zentrum)', dist: 'ca. 18–20 Minuten Fahrzeit', route: 'Über A92 / B15', text: 'Dingolfing ist das Zentrum der niederbayerischen BMW-Community. Viele BMW-Mitarbeiter und Enthusiasten aus Dingolfing schätzen unsere Spezialisierung auf B58, S58, N54, N55 und 3.0 TDI Motoren. Kurze Anfahrt, Prüfstands-Niveau und persönliche Betreuung.' },
             ergolding: { title: 'Chiptuning für Ergolding & Altdorf', dist: 'ca. 10–12 Minuten Fahrzeit', route: 'Über B11 / B15', text: 'Nur einen Katzensprung von Ergolding und Altdorf entfernt: In ca. 10 Minuten bist du bei LA Tuning in Adlkofen. Perfekt erreichbar auch nach Feierabend für Diagnose, Stage 1 oder Getriebeoptimierung.' },
             vilsbiburg: { title: 'Chiptuning für Vilsbiburg & Geisenhausen', dist: 'ca. 12–15 Minuten Fahrzeit', route: 'Über B299 / St2045', text: 'Aus Vilsbiburg und Geisenhausen führt der Weg direkt zu uns nach Adlkofen. Wir stimmen dein Fahrzeug individuell ab, sichern die Originalsoftware und sorgen für spürbar mehr Drehmoment auf der Landstraße.' },
